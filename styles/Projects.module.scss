@@ -1,0 +1,220 @@
+@import '_utils';
+
+.projects {
+  overflow: hidden;
+  background-image: url('/images/Projects.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .contentContainer {
+    width: 80%;
+    margin: 150px auto;
+
+    .headings {
+      @include squadoFont();
+      text-transform: uppercase;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        position: relative;
+
+        span:nth-child(1) {
+          font-size: 150px;
+          color: #ffb833;
+          position: absolute;
+          @include centerAbsDivLeft();
+          line-height: 0;
+          z-index: 0;
+        }
+
+        span:nth-child(2) {
+          position: relative;
+          z-index: 1;
+          font-size: 100px;
+          line-height: 0;
+          display: inline-block;
+          transform: translate(0, 18px);
+        }
+      }
+    }
+
+    .projectContainers {
+      margin-top: 150px;
+
+      .containers {
+        @include display(flex, row, center);
+
+        .left {
+          @include display(flex, column, top);
+          width: 49%;
+
+          .cardImage {
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            position: relative;
+            background-color: #FFAE00;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              max-height: 300px;
+              mix-blend-mode: luminosity;
+              cursor: pointer;
+              transition: 0.4s ease-in-out;
+            }
+
+            &:hover {
+              img {
+                mix-blend-mode: normal;
+              }
+
+              h3 {
+                color: white;
+              }
+            }
+
+            h3 {
+              position: absolute;
+              bottom: 0;
+              right: 20px;
+              color: gold;
+              text-align: right;
+              text-transform: uppercase;
+              @include squadoFont();
+              font-weight: 300;
+              font-size: 1.5rem;
+              transition: 0.4s ease-in-out;
+            }
+          }
+
+          .active {
+            img {
+              mix-blend-mode: normal;
+            }
+
+            h3 {
+              color: white;
+            }
+          }
+        }
+
+        .center {
+          width: 1px;
+          background-color: #ffdc69;
+          margin: 0 20px;
+          position: relative;
+        }
+
+        .right {
+          width: 49%;
+
+          .card {
+            position: relative;
+
+            .dot {
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              position: absolute;
+              top: 20px;
+              left: -21px;
+              transform: translateX(-50%);
+              background-color: black;
+            }
+
+            width: 100%;
+            margin-bottom: 50px;
+            @include display(flex, column, center);
+
+            .projectTitle {
+              @include squadoFont();
+              font-size: 1.4rem;
+              text-transform: uppercase;
+            }
+
+            a {
+              color: black;
+              text-transform: uppercase;
+              font-size: 0.8rem;
+              font-weight: 700;
+              transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+              max-width: 200px;
+
+              hr {
+                display: inline-block;
+                width: 90px;
+                border: solid 1px white;
+                margin: 4px 10px;
+                transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+              }
+
+              &:hover {
+                text-decoration: line-through;
+                color: white;
+
+                hr {
+                  width: 0;
+                  opacity: 0;
+                }
+              }
+            }
+
+            .description {
+              max-width: 400px;
+              color: white;
+              font-weight: 300;
+              margin-top: -5px;
+            }
+
+            .skills {
+              width: 200px;
+              // float: right;
+              margin-top: -5px;
+
+              span {
+                display: inline-block;
+                background-color: black;
+                color: gold;
+                margin: 2px 0px;
+                margin-right: 5px;
+                padding: 5px 10px;
+                border-radius: 20px;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+              }
+            }
+
+            .details {
+              margin-top: -20px;
+
+              p:nth-child(1) {
+                font-weight: 900;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+              }
+
+              p:nth-child(2) {
+                font-weight: 300;
+                text-transform: uppercase;
+                color: white;
+                margin-top: -5px;
+                font-size: 0.7rem;
+              }
+
+              p:nth-child(3) {
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 0.7rem;
+                margin-top: -5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

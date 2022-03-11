@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Squada+One&display=swap');
+
+@mixin squadoFont {
+  font-family: 'Squada One',
+    cursive;
+}
+
+@mixin latoFont {
+  font-family: 'Lato',
+    sans-serif;
+}
+
+@mixin display($display-type, $direction, $justify-content) {
+  display: $display-type;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+}
+
+@mixin centerAbsDivBothSides {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerAbsDivLeft {
+  left: 50%;
+  transform: translateX(-50%);
+}
