@@ -1,4 +1,5 @@
 @import 'utils/_utils';
+@import 'utils/_media';
 
 .aboutSection {
   width: 100%;
@@ -10,18 +11,45 @@
     width: 80%;
     margin: 0 auto;
     padding: 100px 0;
-    // background-color: green;
+
+    @include media("<800px") {
+      @include display(flex, column, center);
+      align-items: center;
+      align-content: center;
+    }
 
     .image {
       width: 50%;
       @include display(flex, row, center);
       align-items: center;
       align-content: center;
+
+      @include media("<800px") {
+        width: 60%;
+      }
     }
 
     .aboutContent {
       width: 50%;
       padding-right: 100px;
+
+      @include media("<1250px") {
+        padding-right: 50px;
+      }
+
+      @include media("<1200px") {
+        padding-right: 0;
+        padding-left: 50px;
+      }
+
+      @include media("<800px") {
+        width: 100%;
+        margin-top: 50px;
+      }
+
+      @include media("<550px") {
+        padding-left: 0;
+      }
 
       .headers {
         @include squadoFont();
@@ -41,6 +69,18 @@
             left: -55px;
             line-height: 0;
             z-index: 0;
+
+            @include media("<800px") {
+              left: 0;
+            }
+
+            @include media("<800px") {
+              font-size: 120px;
+            }
+
+            @include media("<330px") {
+              font-size: 100px;
+            }
           }
 
           span:nth-child(2) {
@@ -62,7 +102,15 @@
       .buttons {
         @include display(flex, row, left);
 
+        @include media("<410px") {
+          @include display(flex, column, left);
+        }
+
         a {
+          @include media("<850px") {
+            margin-bottom: 10px;
+          }
+
           button {
             outline: none;
             border: none;
@@ -74,10 +122,24 @@
             font-weight: 900;
             letter-spacing: 0.1rem;
             cursor: pointer;
+
+            @include media("<1050px") {
+              width: 150px;
+              letter-spacing: 0.05rem;
+              font-size: 0.8rem;
+            }
+
+            @include media("<410px") {
+              width: 100%;
+            }
           }
 
           &:nth-child(1) {
             margin-right: 20px;
+
+            @include media("<410px") {
+              margin-right: 0;
+            }
           }
 
           &:nth-child(2) {
