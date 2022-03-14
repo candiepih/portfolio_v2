@@ -55,6 +55,10 @@
         @include squadoFont();
         text-transform: uppercase;
 
+        @include media("<550px") {
+          text-align: center;
+        }
+
         h1 {
           position: relative;
           display: block;
@@ -81,6 +85,11 @@
             @include media("<330px") {
               font-size: 100px;
             }
+
+            @include media("<550px") {
+              left: 50%;
+              transform: translateX(-50%);
+            }
           }
 
           span:nth-child(2) {
@@ -90,6 +99,14 @@
             line-height: 0;
             display: inline-block;
             transform: translate(0, 18px);
+
+            @include media("<440px") {
+              font-size: 80px;
+            }
+
+            @include media("<350px") {
+              font-size: 60px;
+            }
           }
         }
       }
