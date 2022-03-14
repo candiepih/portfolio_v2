@@ -26,17 +26,33 @@
       @include display(flex, row, space-between);
       margin: 0 auto;
 
-      h1 {
-        font-size: 50px;
-        font-weight: 900;
-        width: 50%;
-        line-height: 0;
+      a {
+        color: black;
+
+        h1 {
+          font-size: 50px;
+          font-weight: 900;
+          width: 50%;
+          line-height: 0;
+        }
       }
 
       ul {
         width: 50%;
         @include display(flex, row, space-around);
         list-style-type: none;
+
+        @include media("<830px") {
+          width: 60%;
+        }
+
+        @include media("<680px") {
+          width: 70%;
+        }
+
+        @include media("<550px") {
+          display: none;
+        }
 
         a {
           text-transform: uppercase;
@@ -49,15 +65,15 @@
   }
 
   .content {
-    // position: absolute;
-    // top: 40%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // width: 80%;
-    // height: 50%;
-    // @include display(flex, row, space-around);
-    // align-items: center;
-    // align-content: center;
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+    @include media("<1000px") {
+      width: 70%;
+    }
 
     h1,
     .right p {
@@ -67,9 +83,8 @@
 
     .left {
       position: absolute;
-      top: 40%;
-      left: 25%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
 
       p {
         font-weight: 900;
@@ -88,15 +103,31 @@
 
         span:nth-child(3) {
           margin-left: 30px;
+
+          @include media("<350px") {
+            margin-left: 0;
+          }
         }
       }
     }
 
     .right {
       position: absolute;
-      top: 60%;
-      right: 20%;
-      transform: translate(-50%, -50%);
+      top: 0;
+      right: 0;
+      transform: translateY(170px);
+
+      @include media("<800px") {
+        transform: translateY(170px);
+      }
+
+      @include media("<750px") {
+        transform: translateY(270px);
+      }
+
+      @include media("<550px") {
+        left: 0;
+      }
 
       p {
         font-size: 24px;
@@ -107,17 +138,13 @@
           display: inline-block;
           width: 85px;
           height: 2px;
-          // border: solid 1px white;
           margin: 7px 5px;
           background: white;
-        }
 
-        // hr {
-        //   display: inline-block;
-        //   width: 90px;
-        //   border: solid 1px white;
-        //   margin: 7px auto;
-        // }
+          @include media("<275px") {
+            width: 75px;
+          }
+        }
       }
     }
 
@@ -132,6 +159,17 @@
     @include display(flex, column, space-around);
     align-items: center;
     align-content: center;
+
+    @include media("<550px") {
+      @include display(flex, row, center);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      a {
+        margin: 0 10px;
+      }
+    }
 
     a {
       border-radius: 50%;

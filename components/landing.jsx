@@ -6,7 +6,7 @@ const LandingPage = () => {
       <iframe src='https://my.spline.design/portfolio-22f1372f4cd33b22cb6236895106dd2c/' frameBorder='0' width='100%' height='100%' />
       <nav className={styles.navigation}>
         <div className={styles.innerContainer}>
-          <h1>as</h1>
+          <a href="#"><h1>as</h1></a>
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Projects</a></li>
