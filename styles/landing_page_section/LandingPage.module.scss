@@ -41,6 +41,7 @@
           text-transform: uppercase;
           color: white;
           font-weight: 700;
+          letter-spacing: 0.2rem;
         }
       }
     }
@@ -100,12 +101,22 @@
         font-size: 24px;
         color: white;
 
-        hr {
+        &::before {
+          content: '';
           display: inline-block;
-          width: 90px;
-          border: solid 1px white;
-          margin: 7px auto;
+          width: 85px;
+          height: 2px;
+          // border: solid 1px white;
+          margin: 7px 5px;
+          background: white;
         }
+
+        // hr {
+        //   display: inline-block;
+        //   width: 90px;
+        //   border: solid 1px white;
+        //   margin: 7px auto;
+        // }
       }
     }
 

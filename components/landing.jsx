@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.scss';
+import styles from '../styles/landing_page_section/LandingPage.module.scss';
 
 const LandingPage = () => {
   return (
@@ -27,7 +27,7 @@ const LandingPage = () => {
             <span>Fullstack</span><br />
             <span>Web Developer</span>
           </h1>
-          <a href='#'><p>About me <hr /></p></a>
+          <a href='#'><p>About me</p></a>
         </div>
       </div>
       <div className={styles.socialLinks}>

@@ -58,13 +58,13 @@
             background-color: #FFAE00;
             border-radius: 10px;
             overflow: hidden;
+            max-height: 280px;
 
             img {
-              width: 100%;
-              max-height: 300px;
               mix-blend-mode: luminosity;
               cursor: pointer;
-              transition: 0.4s ease-in-out;
+              object-fit: cover;
+              object-position: center;
             }
 
             &:hover {
@@ -72,34 +72,45 @@
                 mix-blend-mode: normal;
               }
 
-              h3 {
-                color: white;
-              }
+              // h3 {
+              //   color: white;
+              // }
             }
 
-            h3 {
+            .textHighlights {
               position: absolute;
               bottom: 0;
               right: 20px;
-              color: gold;
-              text-align: right;
               text-transform: uppercase;
-              @include squadoFont();
-              font-weight: 300;
-              font-size: 1.5rem;
-              transition: 0.4s ease-in-out;
+              text-align: right;
+
+              h3 {
+                line-height: 25px;
+                color: gold;
+                @include squadoFont();
+                font-weight: 300;
+                font-size: 1.5rem;
+                transition: 0.4s ease-in-out;
+              }
+
+              p {
+                color: white;
+                font-weight: 300;
+                font-size: 0.8rem;
+                margin-top: -20px;
+              }
             }
           }
 
-          .active {
-            img {
-              mix-blend-mode: normal;
-            }
+          // .active {
+          //   img {
+          //     mix-blend-mode: normal;
+          //   }
 
-            h3 {
-              color: white;
-            }
-          }
+          //   h3 {
+          //     color: white;
+          //   }
+          // }
         }
 
         .center {
@@ -112,54 +123,57 @@
         .right {
           width: 49%;
 
+          .hide {
+            display: none;
+          }
+
           .card {
             position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            @include display(flex, column, center);
 
             .dot {
               width: 10px;
               height: 10px;
               border-radius: 50%;
               position: absolute;
-              top: 20px;
+              top: 32px;
               left: -21px;
               transform: translateX(-50%);
               background-color: black;
             }
 
-            width: 100%;
-            margin-bottom: 50px;
-            @include display(flex, column, center);
-
             .projectTitle {
               @include squadoFont();
-              font-size: 1.4rem;
+              font-size: 1.5rem;
               text-transform: uppercase;
             }
 
             a {
-              color: black;
-              text-transform: uppercase;
-              font-size: 0.8rem;
-              font-weight: 700;
-              transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-              max-width: 200px;
+              max-width: 90px;
+              position: relative;
 
-              hr {
+              span {
+                color: #000000;
                 display: inline-block;
-                width: 90px;
-                border: solid 1px white;
-                margin: 4px 10px;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 900;
                 transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                position: relative;
+                z-index: 1;
               }
 
-              &:hover {
-                text-decoration: line-through;
-                color: white;
-
-                hr {
-                  width: 0;
-                  opacity: 0;
-                }
+              &::before {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 7px;
+                position: absolute;
+                background-color: gold;
+                transform: translateY(12px);
+                z-index: 0;
               }
             }
 
