@@ -79,7 +79,8 @@
 
         @include media("<550px") {
           width: 100%;
-          text-align: left;
+          text-align: center;
+          margin-top: 50px;
         }
 
         .contactCard {
@@ -100,6 +101,7 @@
           p:nth-child(1) {
             text-transform: uppercase;
             font-weight: bold;
+            color: white;
           }
 
           p:nth-child(2) {
@@ -187,7 +189,7 @@
             text-transform: uppercase;
             cursor: pointer;
 
-            @include media("<400px") {
+            @include media("<550px") {
               width: 100%;
             }
           }
@@ -199,7 +201,7 @@
   footer {
     text-align: center;
     color: #000000;
-    padding: 20px 0;
+    padding: 20px;
     background-color: #ffb836f5;
 
     span {

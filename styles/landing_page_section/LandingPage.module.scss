@@ -27,18 +27,18 @@
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(17.5px);
     -webkit-backdrop-filter: blur(17.5px);
-    border-radius: 10px;
-    z-index: 2;
+    z-index: 3;
 
     .innerContainer {
+      width: 90%;
+      margin: 0 auto;
+      @include display(flex, row, space-between);
       align-items: center;
       align-content: center;
-      width: 95%;
-      @include display(flex, row, space-between);
-      margin: 0 auto;
 
       a {
         color: black;
+        overflow: hidden;
 
         h1 {
           font-size: 50px;
@@ -173,14 +173,6 @@
 
     @include media("<550px") {
       display: none;
-      // @include display(flex, row, center);
-      // position: absolute;
-      // bottom: 0;
-      // right: 0;
-
-      // a {
-      //   margin: 0 10px;
-      // }
     }
 
     a {
