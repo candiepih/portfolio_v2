@@ -1,4 +1,5 @@
-@import 'utils/_utils';
+@import 'utils/utils';
+@import 'utils/media';
 
 .projects {
   overflow: hidden;
@@ -10,6 +11,10 @@
   .contentContainer {
     width: 80%;
     margin: 150px auto;
+
+    @include media("<440px") {
+      margin: 100px auto;
+    }
 
     .headings {
       @include squadoFont();
@@ -27,6 +32,14 @@
           @include centerAbsDivLeft();
           line-height: 0;
           z-index: 0;
+
+          @include media("<440px") {
+            font-size: 120px;
+          }
+
+          @include media("<350px") {
+            font-size: 100px;
+          }
         }
 
         span:nth-child(2) {
@@ -36,6 +49,14 @@
           line-height: 0;
           display: inline-block;
           transform: translate(0, 18px);
+
+          @include media("<440px") {
+            font-size: 80px;
+          }
+
+          @include media("<350px") {
+            font-size: 60px;
+          }
         }
       }
     }
@@ -46,9 +67,30 @@
       .containers {
         @include display(flex, row, center);
 
+        @include media("<750px") {
+          @include display(flex, column, center);
+        }
+
         .left {
           @include display(flex, column, top);
           width: 49%;
+
+          @include media("<750px") {
+            @include display(flex, row, center);
+            width: 100%;
+            height: 200px;
+          }
+
+          @include media("<575px") {
+            overflow: scroll;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            @include display(flex, row, left);
+          }
 
           .cardImage {
             width: 70%;
@@ -59,6 +101,12 @@
             border-radius: 10px;
             overflow: hidden;
             max-height: 280px;
+
+            @include media("<750px") {
+              width: 47%;
+              min-width: 200px;
+              margin-right: 5px;
+            }
 
             img {
               mix-blend-mode: luminosity;
@@ -123,6 +171,12 @@
         .right {
           width: 49%;
 
+          @include media("<750px") {
+            width: 100%;
+            border-left: 1px solid #ffdc69;
+            padding-left: 30px;
+          }
+
           .hide {
             display: none;
           }
@@ -142,6 +196,10 @@
               left: -21px;
               transform: translateX(-50%);
               background-color: black;
+
+              @include media("<750px") {
+                left: -30px;
+              }
             }
 
             .projectTitle {
