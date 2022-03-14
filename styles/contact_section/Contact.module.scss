@@ -1,4 +1,5 @@
-@import 'utils/_utils';
+@import '../utils/utils';
+@import '../utils/media';
 
 .contact {
   background-image: url('/images/Footer.png');
@@ -11,6 +12,10 @@
     width: 80%;
     margin: 150px auto;
 
+    @include media("<550px") {
+      margin: 100px auto;
+    }
+
     .headings {
       @include squadoFont();
       text-transform: uppercase;
@@ -21,12 +26,20 @@
         position: relative;
 
         span:nth-child(1) {
-          font-size: 150px;
+          font-size: 120px;
           color: #ffb833;
           position: absolute;
           @include centerAbsDivLeft();
           line-height: 0;
           z-index: 0;
+
+          @include media("<575px") {
+            font-size: 120px;
+          }
+
+          @include media("<455px") {
+            font-size: 100px;
+          }
         }
 
         span:nth-child(2) {
@@ -36,6 +49,16 @@
           line-height: 0;
           display: inline-block;
           transform: translate(0, 18px);
+
+          @include media("<575px") {
+            font-size: 80px;
+          }
+
+          @include media("<455px") {
+            font-size: 60px;
+            line-height: normal;
+            margin-top: -50px;
+          }
         }
       }
     }
@@ -44,9 +67,20 @@
       margin: 150px 0;
       @include display(flex, row, center);
 
+      @include media("<550px") {
+        @include display(flex, column-reverse, center);
+        margin: 0;
+        margin-top: 50px;
+      }
+
       .left {
         width: 45%;
         text-align: right;
+
+        @include media("<550px") {
+          width: 100%;
+          text-align: left;
+        }
 
         .contactCard {
           p {
@@ -81,10 +115,18 @@
         width: 1px;
         background-color: #ffdc69;
         margin: 0 20px;
+
+        @include media("<550px") {
+          display: none;
+        }
       }
 
       .right {
         width: 55%;
+
+        @include media("<550px") {
+          width: 100%;
+        }
 
         p {
           max-width: 400px;
@@ -144,6 +186,10 @@
             font-weight: 900;
             text-transform: uppercase;
             cursor: pointer;
+
+            @include media("<400px") {
+              width: 100%;
+            }
           }
         }
       }
