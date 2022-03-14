@@ -172,14 +172,15 @@
     align-content: center;
 
     @include media("<550px") {
-      @include display(flex, row, center);
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      display: none;
+      // @include display(flex, row, center);
+      // position: absolute;
+      // bottom: 0;
+      // right: 0;
 
-      a {
-        margin: 0 10px;
-      }
+      // a {
+      //   margin: 0 10px;
+      // }
     }
 
     a {
