@@ -5,7 +5,7 @@ const LandingPage = () => {
     <div className={styles.landingPage}>
       <iframe src='https://my.spline.design/portfolio-22f1372f4cd33b22cb6236895106dd2c/' frameBorder='0' width='100%' height='100%' />
       <nav className={styles.navigation}>
-        <div className={styles.innerContainer}>
+        <div className={styles.defaultContainer}>
           <div className={styles.logo}>
             <a href="#"><h1>as</h1></a>
           </div>
@@ -14,6 +14,20 @@ const LandingPage = () => {
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
+        </div>
+        <div className={styles.mobileContainer}>
+          <div className={styles.hamburger}>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+          </div>
+          <div className={styles.drawer}>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <div className={styles.content}>
