@@ -25,10 +25,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: goldenrod;
-    // background: rgba(255, 255, 255, 0);
-    // backdrop-filter: blur(17.5px);
-    // -webkit-backdrop-filter: blur(17.5px);
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(17.5px);
+    -webkit-backdrop-filter: blur(17.5px);
     z-index: 3;
     transition: height 0.5s ease-in-out;
 
@@ -209,18 +208,35 @@
       p {
         font-size: 24px;
         color: white;
+        position: relative;
+        line-height: 0;
 
-        &::before {
+        // &::before {
+        //   content: '';
+        //   display: inline-block;
+        //   width: 85px;
+        //   height: 2px;
+        //   margin: 7px 5px;
+        //   background: white;
+
+        //   @include media("<275px") {
+        //     width: 75px;
+        //   }
+        // }
+        span {
+          position: relative;
+          z-index: 1;
+        }
+
+        &::after {
           content: '';
           display: inline-block;
-          width: 85px;
-          height: 2px;
-          margin: 7px 5px;
-          background: white;
-
-          @include media("<275px") {
-            width: 75px;
-          }
+          width: 90px;
+          height: 13px;
+          position: absolute;
+          left: 0;
+          background-color: gold;
+          z-index: 0;
         }
       }
     }

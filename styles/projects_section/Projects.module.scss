@@ -93,10 +93,12 @@
             background-color: #FFAE00;
             border-radius: 10px;
             overflow: hidden;
+            height: 280px;
             max-height: 280px;
 
             @include media("<750px") {
               width: 47%;
+              height: 150px;
               min-width: 250px;
               margin-right: 5px;
 
@@ -123,10 +125,6 @@
               img {
                 mix-blend-mode: normal;
               }
-
-              // h3 {
-              //   color: white;
-              // }
             }
 
             .textHighlights {

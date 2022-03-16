@@ -1,5 +1,6 @@
 import styles from '../styles/projects_section/Projects.module.scss';
 import { useEffect, useRef } from 'react';
+import Image from "next/image";
 
 const Projects = () => {
   const webDevRef = useRef(null);
@@ -39,14 +40,14 @@ const Projects = () => {
           <div className={styles.containers}>
             <div className={styles.left}>
               <div className={`${styles.cardImage} ${styles.active}`} ref={webDevRef}>
-                <img src='/images/webdev.jpg' alt='web development' />
+                <Image layout='fill' src='/images/webdev.jpg' alt='web development' />
                 <div className={styles.textHighlights}>
                   <h3>Web<br />Development</h3>
                   <p>5 Projects</p>
                 </div>
               </div>
               <div className={styles.cardImage} ref={gameDevRef}>
-                <img src='/images/gamedev.jpg' alt='game development' />
+                <Image layout='fill' src='/images/gamedev.jpg' alt='game development' />
                 <div className={styles.textHighlights}>
                   <h3>Game<br />Development</h3>
                   <p>3 Projects</p>

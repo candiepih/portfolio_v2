@@ -43,7 +43,7 @@ const LandingPage = () => {
             <span>Fullstack</span><br />
             <span><span className={styles.spanInner}>Web</span> Developer</span>
           </h1>
-          <a href='#'><p>About me</p></a>
+          <a href='#'><p><span>About me</span></p></a>
         </div>
       </div>
       <div className={styles.socialLinks}>
