@@ -1,9 +1,24 @@
 import styles from '../styles/landing_page_section/LandingPage.module.scss';
+import { useRef, useEffect } from 'react';
 
 const LandingPage = () => {
+  const iframeRef = useRef(null);
+  useEffect(() => {
+    // display iframe depending mobile or desktop widths
+    const iframe = iframeRef.current;
+    const iframeContainer = iframe.parentElement;
+    const iframeContainerWidth = iframeContainer.offsetWidth;
+    if (iframeContainerWidth < 550) {
+      iframe.style.display = 'none';
+    }
+    else {
+      iframe.style.display = 'block';
+    }
+  });
+
   return (
     <div className={styles.landingPage}>
-      <iframe src='https://my.spline.design/portfolio-22f1372f4cd33b22cb6236895106dd2c/' frameBorder='0' width='100%' height='100%' />
+      <iframe ref={iframeRef} src='https://my.spline.design/portfolio-22f1372f4cd33b22cb6236895106dd2c/' frameBorder='0' width='100%' height='100%' />
       <nav className={styles.navigation}>
         <div className={styles.defaultContainer}>
           <div className={styles.logo}>
