@@ -3,18 +3,6 @@ import { useRef, useEffect } from 'react';
 
 const LandingPage = () => {
   const iframeRef = useRef(null);
-  useEffect(() => {
-    // display iframe depending mobile or desktop widths
-    const iframe = iframeRef.current;
-    const iframeContainer = iframe.parentElement;
-    const iframeContainerWidth = iframeContainer.offsetWidth;
-    if (iframeContainerWidth < 550) {
-      iframe.style.display = 'none';
-    }
-    else {
-      iframe.style.display = 'block';
-    }
-  });
 
   return (
     <div className={styles.landingPage}>

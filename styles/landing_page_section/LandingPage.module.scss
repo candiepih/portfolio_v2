@@ -8,16 +8,15 @@
 .landingPage {
   width: 100%;
   height: 100vh;
+  background-image: url('/images/LandingPageImage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   @include media("<550px") {
-    background-image: url('/images/LandingPageImage.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    // iframe {
-    //   display: none;
-    // }
+    iframe {
+      display: none;
+    }
   }
 
   .navigation {
@@ -104,6 +103,7 @@
         bottom: 15px;
         right: 20px;
         display: none;
+        z-index: 3;
 
         @include media("<550px") {
           @include display(flex, column, center);
@@ -113,14 +113,14 @@
           width: 30%;
           height: 3px;
           margin: 3px 0;
-          background-color: white;
+          background-color: black;
         }
 
         .line:nth-child(2) {
           width: 100%;
           height: 3px;
           margin: 5px 0;
-          background-color: white;
+          background-color: black;
           align-self: center;
         }
 
@@ -128,13 +128,38 @@
           width: 30%;
           height: 3px;
           margin: 3px 0;
-          background-color: white;
+          background-color: black;
           align-self: flex-end;
         }
       }
 
       .drawer {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        @include display(flex, row, center);
+        align-items: center;
+        align-content: center;
+
+        ul {
+          @include squadoFont();
+
+          li {
+            list-style-type: none;
+            margin: 30px 0;
+
+            a {
+              text-transform: uppercase;
+              color: black;
+              font-weight: 700;
+              font-size: 3rem;
+
+            }
+          }
+        }
       }
     }
   }
@@ -211,18 +236,6 @@
         position: relative;
         line-height: 0;
 
-        // &::before {
-        //   content: '';
-        //   display: inline-block;
-        //   width: 85px;
-        //   height: 2px;
-        //   margin: 7px 5px;
-        //   background: white;
-
-        //   @include media("<275px") {
-        //     width: 75px;
-        //   }
-        // }
         span {
           position: relative;
           z-index: 1;
