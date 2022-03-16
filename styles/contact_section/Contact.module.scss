@@ -68,7 +68,7 @@
       @include display(flex, row, center);
 
       @include media("<550px") {
-        @include display(flex, column-reverse, center);
+        @include display(flex, column, center);
         margin: 0;
         margin-top: 50px;
       }
@@ -81,6 +81,8 @@
           width: 100%;
           text-align: center;
           margin-top: 50px;
+          display: grid;
+          grid-template-columns: auto auto;
         }
 
         .contactCard {
