@@ -27,7 +27,7 @@ const LandingPage = () => {
         <div className={styles.right}>
           <h1>
             <span>Fullstack</span><br />
-            <span>Web Developer</span>
+            <span><span className={styles.spanInner}>Web</span> Developer</span>
           </h1>
           <a href='#'><p>About me</p></a>
         </div>

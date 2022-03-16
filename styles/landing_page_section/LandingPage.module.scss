@@ -149,6 +149,11 @@
 
       @include media("<550px") {
         left: 0;
+        top: 50px;
+      }
+
+      .spanInner {
+        color: white;
       }
 
       p {
