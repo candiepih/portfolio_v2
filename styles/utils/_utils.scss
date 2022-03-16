@@ -26,3 +26,12 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@mixin textOutline($textColor, $outlineColor, $letter-spacing) {
+  color: $textColor;
+  text-shadow: -1px -1px 0 $outlineColor,
+    1px -1px 0 $outlineColor,
+    -1px 1px 0 $outlineColor,
+    1px 1px 0 $outlineColor;
+  letter-spacing: $letter-spacing;
+}

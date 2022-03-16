@@ -44,13 +44,17 @@
       align-content: center;
 
       .logo {
+        position: relative;
+        z-index: 3;
+
         @include media("<550px") {
           margin-top: -15px;
+          margin-left: 10px;
           width: 90%;
         }
 
         a {
-          color: black;
+          color: white;
           overflow: hidden;
           display: inline-block;
 
@@ -90,7 +94,7 @@
 
     // Mobile navigation
     .mobileContainer {
-      background-color: black;
+      // background-color: black;
 
       .hamburger {
         width: 40px;
@@ -113,14 +117,14 @@
           width: 30%;
           height: 3px;
           margin: 3px 0;
-          background-color: black;
+          background-color: white;
         }
 
         .line:nth-child(2) {
           width: 100%;
           height: 3px;
           margin: 5px 0;
-          background-color: black;
+          background-color: white;
           align-self: center;
         }
 
@@ -128,7 +132,7 @@
           width: 30%;
           height: 3px;
           margin: 3px 0;
-          background-color: black;
+          background-color: white;
           align-self: flex-end;
         }
       }
@@ -139,8 +143,8 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: white;
-        @include display(flex, row, center);
+        background-color: black;
+        @include display(flex, row, left);
         align-items: center;
         align-content: center;
 
@@ -153,10 +157,48 @@
 
             a {
               text-transform: uppercase;
-              color: black;
               font-weight: 700;
+              letter-spacing: 0.2rem;
               font-size: 3rem;
+              color: white;
+              transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
 
+              &:hover {
+                @include textOutline(black, gold, 0.25rem);
+              }
+            }
+          }
+        }
+
+        .mobileNavsocialLinks {
+          position: absolute;
+          bottom: 50px;
+          @include centerAbsDivLeft();
+          z-index: 3;
+          height: 200px;
+          @include display(flex, row, space-around);
+          align-items: center;
+          align-content: center;
+
+          a {
+            border-radius: 50%;
+            padding: 3px;
+            display: block;
+            width: 35px;
+            height: 35px;
+            margin: 0 10px;
+            background: rgb(255, 166, 0);
+            background: radial-gradient(circle, rgba(255, 166, 0, 1) 10%, rgb(255, 217, 0) 100%);
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+              background: rgb(255, 255, 255);
+              background: radial-gradient(circle, rgba(255, 255, 255, 1) 10%, rgb(255, 255, 255) 100%);
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
             }
           }
         }

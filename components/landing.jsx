@@ -30,6 +30,12 @@ const LandingPage = () => {
               <li><a href="#">Projects</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
+            <div className={styles.mobileNavsocialLinks}>
+              <a href="#"><img src='/icons/facebook.svg' /></a>
+              <a href="#"><img src='/icons/whatsapp.svg' /></a>
+              <a href="#"><img src='/icons/linkedin.svg' /></a>
+              <a href="#"><img src='/icons/github.svg' /></a>
+            </div>
           </div>
         </div>
       </nav>
