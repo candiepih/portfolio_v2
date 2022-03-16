@@ -25,11 +25,8 @@
       align-content: center;
 
       @include media("<800px") {
-        width: 60%;
-      }
-
-      @include media("<500px") {
-        width: 100%;
+        width: 70%;
+        height: 70%;
       }
     }
 
