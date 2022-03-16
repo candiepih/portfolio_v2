@@ -33,12 +33,9 @@
           line-height: 0;
           z-index: 0;
 
-          @include media("<440px") {
-            font-size: 120px;
-          }
-
-          @include media("<350px") {
+          @include media("<455px") {
             font-size: 100px;
+            bottom: 60%;
           }
         }
 
@@ -50,11 +47,7 @@
           display: inline-block;
           transform: translate(0, 18px);
 
-          @include media("<440px") {
-            font-size: 80px;
-          }
-
-          @include media("<350px") {
+          @include media("<455px") {
             font-size: 60px;
           }
         }
