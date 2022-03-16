@@ -10,7 +10,13 @@ const Contact = () => {
             <span>Contact Me</span>
           </h1>
         </div>
-
+        <div className={styles.contactSectionText}>
+          <p>
+            I'm excited to learn about it, please don't hesitate to
+            fill the form and i'll get back to you. You can also leave a
+            Hi! and we can communicate more. Don't be a stranger, stranger.
+          </p>
+        </div>
         <div className={styles.formInfo}>
           <div className={styles.left}>
             <div className={styles.contactCard}>
