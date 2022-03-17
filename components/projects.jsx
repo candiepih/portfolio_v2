@@ -30,10 +30,8 @@ const Projects = () => {
     <div className={styles.projects}>
       <div className={styles.contentContainer}>
         <div className={styles.headings}>
-          <h1>
-            <span>Projects</span>
-            <span>Projects</span>
-          </h1>
+          <h1>Projects</h1>
+          <h1>Projects</h1>
         </div>
 
         <div className={styles.projectContainers}>

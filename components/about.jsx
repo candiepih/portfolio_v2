@@ -6,7 +6,7 @@ const About = () => {
     <div className={styles.aboutSection}>
       <div className={styles.innerContainer}>
         <div className={styles.image}>
-          <Image width={420} height={441} src="/images/alex-image.png" alt="Alex Steve" />
+          <img src="/images/alex-image.png" alt="Alex Steve" />
         </div>
         <div className={styles.aboutContent}>
           <div className={styles.headers}>

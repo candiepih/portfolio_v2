@@ -20,14 +20,17 @@
 
     .image {
       width: 50%;
+      max-width: 400px;
       @include display(flex, row, center);
       align-items: center;
       align-content: center;
 
-      @include media("<550px") {
-        width: calc(70% + 20px);
-        height: calc(70% + 41px);
+      img {
+        width: 100%;
+        object-fit: contain;
       }
+
+      @include media("<550px") {}
     }
 
     .aboutContent {
@@ -78,6 +81,7 @@
             left: -55px;
             line-height: 0;
             z-index: 0;
+            @include textOutline(#FFAC11, gold, 0.2rem);
 
             @include media("<800px") {
               font-size: 120px;

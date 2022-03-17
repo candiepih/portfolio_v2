@@ -13,7 +13,7 @@
     margin: 150px auto;
 
     @include media("<750px") {
-      margin: 100px auto;
+      margin: 50px auto;
     }
 
     .headings {
@@ -21,35 +21,38 @@
       text-transform: uppercase;
       text-align: center;
 
-      h1 {
-        margin: 0;
-        position: relative;
+      // margin: 0;
+      position: relative;
 
-        span:nth-child(1) {
-          font-size: 150px;
-          color: #ffb833;
-          position: absolute;
-          @include centerAbsDivLeft();
-          line-height: 0;
-          z-index: 0;
+      h1:nth-child(1) {
+        font-size: 150px;
+        color: #ffb833;
+        position: absolute;
+        @include centerAbsDivLeft();
+        line-height: 0;
+        z-index: 0;
+        @include textOutline(#FFAC11, gold, 0.2rem);
 
-          @include media("<455px") {
-            font-size: 100px;
-            bottom: 60%;
-          }
+        @include media("<800px") {
+          font-size: 120px;
+          // bottom: 70%;
         }
 
-        span:nth-child(2) {
-          position: relative;
-          z-index: 1;
+        @include media("<455px") {
           font-size: 100px;
-          line-height: 0;
-          display: inline-block;
-          transform: translate(0, 18px);
+        }
+      }
 
-          @include media("<455px") {
-            font-size: 60px;
-          }
+      h1:nth-child(2) {
+        position: relative;
+        z-index: 1;
+        font-size: 100px;
+        line-height: 0;
+        display: inline-block;
+        transform: translate(0, 25px);
+
+        @include media("<455px") {
+          font-size: 60px;
         }
       }
     }
