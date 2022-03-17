@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from '../styles/about_section/About.module.scss';
+import Headings from "./Headings";
 
 const About = () => {
   return (
@@ -9,9 +10,7 @@ const About = () => {
           <img src="/images/alex-image.png" alt="Alex Steve" />
         </div>
         <div className={styles.aboutContent}>
-          <div className={styles.headers}>
-            <h1><span>About</span><span>About</span></h1>
-          </div>
+          <Headings name={"about"} />
           <p>
             I specialize mostly in building web and mobile applications and great experiences to the
             business needs of my clients. I have a great interest in blockchain, machine learning and

@@ -16,6 +16,7 @@
       @include display(flex, column, center);
       align-items: center;
       align-content: center;
+      padding: 0;
     }
 
     .image {
@@ -30,12 +31,14 @@
         object-fit: contain;
       }
 
-      @include media("<550px") {}
+      @include media("<550px") {
+        display: none;
+      }
     }
 
     .aboutContent {
       width: 50%;
-      padding-right: 100px;
+      padding: 0 50px;
 
       @include media("<1250px") {
         padding-right: 50px;
@@ -53,64 +56,6 @@
 
       @include media("<550px") {
         padding-left: 0;
-      }
-
-      .headers {
-        @include squadoFont();
-        text-transform: uppercase;
-
-        @include media("<550px") {
-          text-align: center;
-        }
-
-        h1 {
-          position: relative;
-          display: block;
-          margin: 0;
-          margin-top: 50px;
-
-          @include media("<800px") {
-            text-align: center;
-          }
-
-          span:nth-child(1) {
-            font-size: 150px;
-            color: #ffb833;
-            position: absolute;
-            top: 0;
-            left: -55px;
-            line-height: 0;
-            z-index: 0;
-            @include textOutline(#FFAC11, gold, 0.2rem);
-
-            @include media("<800px") {
-              font-size: 120px;
-              left: 50%;
-              transform: translateX(-50%);
-            }
-
-            @include media("<455px") {
-              font-size: 100px;
-            }
-          }
-
-          span:nth-child(2) {
-            position: relative;
-            z-index: 1;
-            font-size: 100px;
-            line-height: 0;
-            display: inline-block;
-            transform: translate(0, 18px);
-
-            @include media("<800px") {
-              transform: translate(0, 5px);
-            }
-
-            @include media("<455px") {
-              font-size: 60px;
-            }
-          }
-        }
       }
 
       p {

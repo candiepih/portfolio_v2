@@ -1,6 +1,7 @@
 import styles from '../styles/projects_section/Projects.module.scss';
 import { useEffect, useRef } from 'react';
 import Image from "next/image";
+import Headings from './Headings';
 
 const Projects = () => {
   const webDevRef = useRef(null);
@@ -29,10 +30,7 @@ const Projects = () => {
   return (
     <div className={styles.projects}>
       <div className={styles.contentContainer}>
-        <div className={styles.headings}>
-          <h1>Projects</h1>
-          <h1>Projects</h1>
-        </div>
+        <Headings name={"projects"} />
 
         <div className={styles.projectContainers}>
           <div className={styles.containers}>

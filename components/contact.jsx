@@ -1,15 +1,11 @@
 import styles from '../styles/contact_section/Contact.module.scss';
+import Headings from './Headings';
 
 const Contact = () => {
   return (
     <div className={styles.contact}>
       <div className={styles.container}>
-        <div className={styles.headings}>
-          <h1>
-            <span>Contact</span>
-            <span>Contact Me</span>
-          </h1>
-        </div>
+        <Headings name={"contact"} />
         <div className={styles.contactSectionText}>
           <p>
             I'm excited to learn about it, please don't hesitate to
