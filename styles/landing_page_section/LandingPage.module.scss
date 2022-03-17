@@ -94,7 +94,11 @@
 
     // Mobile navigation
     .mobileContainer {
+
       // background-color: black;
+      @include media(">550px") {
+        display: none;
+      }
 
       .hamburger {
         width: 40px;
@@ -106,12 +110,8 @@
         position: absolute;
         bottom: 15px;
         right: 20px;
-        display: none;
         z-index: 3;
-
-        @include media("<550px") {
-          @include display(flex, column, center);
-        }
+        @include display(flex, column, center);
 
         .line:nth-child(1) {
           width: 30%;
