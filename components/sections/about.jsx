@@ -5,7 +5,6 @@ import Headings from "../Headings";
 const About = () => {
   return (
     <div className={styles.aboutSection}>
-      <div className={styles.landingPageAlternate}></div>
       <div className={styles.innerContainer}>
         <div className={styles.image}>
           <img src="/images/alex-image.png" alt="Alex Steve" />

@@ -19,12 +19,12 @@ export default function Home() {
         <link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon16x16.png" sizes="16x16"></link>
       </Head>
       <FixedSections />
-      <Scroll>
-        <LandingPage />
-        <About />
-        <Projects />
-        <Contact />
-      </Scroll>
+      <LandingPage />
+      {/* <Scroll> */}
+      <About />
+      <Projects />
+      <Contact />
+      {/* </Scroll> */}
     </React.Fragment>
   )
 }
