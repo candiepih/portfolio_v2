@@ -1,5 +1,5 @@
-@import 'utils/_utils';
-@import 'utils/_media';
+@import 'utils/utils';
+@import 'utils/media';
 
 .container {
   height: 100vh;
@@ -147,6 +147,7 @@
         @include display(flex, row, left);
         align-items: center;
         align-content: center;
+        display: none;
 
         ul {
           @include squadoFont();
@@ -172,7 +173,7 @@
 
         .mobileNavsocialLinks {
           position: absolute;
-          bottom: 50px;
+          bottom: 0;
           @include centerAbsDivLeft();
           z-index: 3;
           height: 200px;
