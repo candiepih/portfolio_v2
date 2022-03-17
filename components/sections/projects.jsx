@@ -1,7 +1,7 @@
-import styles from '../styles/projects_section/Projects.module.scss';
+import styles from '../../styles/projects_section/Projects.module.scss';
 import { useEffect, useRef } from 'react';
 import Image from "next/image";
-import Headings from './Headings';
+import Headings from '../Headings';
 
 const Projects = () => {
   const webDevRef = useRef(null);

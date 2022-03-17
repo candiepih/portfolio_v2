@@ -1,5 +1,5 @@
-import styles from '../styles/contact_section/Contact.module.scss';
-import Headings from './Headings';
+import styles from '../../styles/contact_section/Contact.module.scss';
+import Headings from '../Headings';
 
 const Contact = () => {
   return (

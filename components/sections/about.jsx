@@ -1,10 +1,11 @@
 import Image from "next/image";
-import styles from '../styles/about_section/About.module.scss';
-import Headings from "./Headings";
+import styles from '../../styles/about_section/About.module.scss';
+import Headings from "../Headings";
 
 const About = () => {
   return (
     <div className={styles.aboutSection}>
+      <div className={styles.landingPageAlternate}></div>
       <div className={styles.innerContainer}>
         <div className={styles.image}>
           <img src="/images/alex-image.png" alt="Alex Steve" />

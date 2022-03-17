@@ -1,12 +1,9 @@
 import styles from '../styles/landing_page_section/LandingPage.module.scss';
-import { useRef, useEffect } from 'react';
+import React from 'react';
 
-const LandingPage = () => {
-  const iframeRef = useRef(null);
-
+const FixedSections = () => {
   return (
-    <div className={styles.landingPage}>
-      <iframe ref={iframeRef} src='https://my.spline.design/portfolio-22f1372f4cd33b22cb6236895106dd2c/' frameBorder='0' width='100%' height='100%' />
+    <React.Fragment>
       <nav className={styles.navigation}>
         <div className={styles.defaultContainer}>
           <div className={styles.logo}>
@@ -39,30 +36,14 @@ const LandingPage = () => {
           </div>
         </div>
       </nav>
-      <div className={styles.content}>
-        <div className={styles.left}>
-          <p>Howdy, I am</p>
-          <h1>
-            <span>Alex</span><br />
-            <span>Steve</span>
-          </h1>
-        </div>
-        <div className={styles.right}>
-          <h1>
-            <span>Fullstack</span><br />
-            <span><span className={styles.spanInner}>Web</span> Developer</span>
-          </h1>
-          <a href='#'><p><span>About me</span></p></a>
-        </div>
-      </div>
       <div className={styles.socialLinks}>
         <a href="#"><img src='/icons/facebook.svg' /></a>
         <a href="#"><img src='/icons/whatsapp.svg' /></a>
         <a href="#"><img src='/icons/linkedin.svg' /></a>
         <a href="#"><img src='/icons/github.svg' /></a>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 
-export default LandingPage;
+export default FixedSections;
