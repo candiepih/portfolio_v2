@@ -6,11 +6,11 @@ import Contact from '../components/sections/contact';
 import Scroll from '../components/Scroll';
 import FixedSections from '../components/minorSections/FixedSections';
 import React from 'react';
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+// import gsap from "gsap";
+// import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger);
+  // gsap.registerPlugin(ScrollTrigger);
   return (
     <React.Fragment>
       <Head>
@@ -21,12 +21,12 @@ export default function Home() {
         <link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon16x16.png" sizes="16x16"></link>
       </Head>
       <FixedSections />
-      <Scroll>
-        <LandingPage />
-        <About />
-        <Projects />
-        <Contact />
-      </Scroll>
+      {/* <Scroll> */}
+      <LandingPage />
+      <About />
+      <Projects />
+      <Contact />
+      {/* </Scroll> */}
     </React.Fragment>
   )
 }
