@@ -1,4 +1,4 @@
-import styles from '../styles/landing_page_section/LandingPage.module.scss';
+import styles from '../../styles/landing_page_section/LandingPage.module.scss';
 import React from 'react';
 
 const FixedSections = () => {

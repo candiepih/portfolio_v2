@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from '../../styles/about_section/About.module.scss';
-import Headings from "../Headings";
+import Headings from "../minorSections/Headings";
 
 const About = () => {
   return (

@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Squada+One&display=swap');
-
-@mixin squadoFont {
+@mixin HeadingsFont {
   font-family: 'Squada One',
     cursive;
+  // font-family: 'Anton',
+  //   sans-serif;
 }
 
-@mixin latoFont {
-  font-family: 'Lato',
+@mixin NormalFont {
+  font-family: 'Manrope',
     sans-serif;
 }
+
+$main-color: #ffa600;
+$primary-color: white;
+$secondary-color: black;
 
 @mixin display($display-type, $direction, $justify-content) {
   display: $display-type;

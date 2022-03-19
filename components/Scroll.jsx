@@ -1,6 +1,6 @@
 import Scrollbar from 'smooth-scrollbar';
 import { useEffect, useRef } from 'react';
-import styles from '../styles/components/scrollbar.module.scss';
+import styles from '../styles/minorSections/scrollbar.module.scss';
 
 const Scroll = ({ children }) => {
   const options = {

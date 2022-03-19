@@ -31,7 +31,7 @@
 
     h1,
     .right p {
-      @include squadoFont();
+      @include HeadingsFont();
       text-transform: uppercase;
     }
 
@@ -47,7 +47,7 @@
       }
 
       h1 {
-        @include squadoFont();
+        @include HeadingsFont();
         font-size: 100px;
         margin: 0;
 
@@ -275,7 +275,7 @@
       display: none;
 
       ul {
-        @include squadoFont();
+        @include HeadingsFont();
 
         li {
           list-style-type: none;

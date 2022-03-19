@@ -17,7 +17,7 @@
     }
 
     .headings {
-      @include squadoFont();
+      @include HeadingsFont();
       text-transform: uppercase;
       text-align: center;
 

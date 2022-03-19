@@ -1,4 +1,4 @@
-import styles from '../styles/components/Headings.module.scss';
+import styles from '../../styles/minorSections/Headings.module.scss';
 
 const Headings = ({ name }) => {
   return (

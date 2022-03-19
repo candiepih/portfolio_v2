@@ -4,7 +4,7 @@ import About from '../components/sections/about';
 import Projects from '../components/sections/projects';
 import Contact from '../components/sections/contact';
 import Scroll from '../components/Scroll';
-import FixedSections from '../components/FixedSections';
+import FixedSections from '../components/minorSections/FixedSections';
 import React from 'react';
 
 
