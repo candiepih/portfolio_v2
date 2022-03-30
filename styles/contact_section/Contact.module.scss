@@ -1,1 +1,104 @@
-.contact {}
+@import "../utils";
+
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $main-color-shade;
+
+  .headingContainer {
+    @include flex(row, center);
+    padding: 90px 0;
+  }
+
+  .sectionsContainer {
+    @include sectionsContainer();
+
+    .leftSection {
+      width: 40%;
+      color: white;
+
+      .boldTitle {
+        font-size: 3.2rem;
+        font-weight: bold;
+        margin-top: -20px;
+
+        span {
+          color: $secondary-color;
+        }
+      }
+
+      .details {
+        margin-left: 30px;
+      }
+    }
+
+    .rightSection {
+      width: 60%;
+
+      form {
+        margin-left: 50px;
+
+        .inputGroup {
+          width: 100%;
+          margin-bottom: 40px;
+          @include flex(row, space-between);
+
+          input {
+            width: 48%;
+            background-color: transparent;
+            border: 1px solid $primary-color-1;
+            height: 45px;
+            padding: 0 10px;
+            @include NormalFont();
+
+            &:focus {
+              outline: none;
+              border: 1px solid $primary-color-1;
+            }
+
+            &::placeholder {
+              text-transform: uppercase;
+              font-weight: 700;
+              color: white;
+            }
+          }
+        }
+
+        textarea {
+          width: 100%;
+          background-color: transparent;
+          border: 1px solid $primary-color-1;
+          height: 100px;
+          padding: 10px;
+          margin-bottom: 40px;
+          @include NormalFont();
+
+          &:focus {
+            outline: none;
+            border: 1px solid $primary-color-1;
+          }
+
+          &::placeholder {
+            text-transform: uppercase;
+            font-weight: 700;
+            color: white;
+          }
+        }
+
+        button {
+          color: $primary-color-2;
+          cursor: pointer;
+          outline: none;
+          border: none;
+          width: 200px;
+          height: 45px;
+          background-color: $secondary-color;
+          text-transform: uppercase;
+          font-weight: 700;
+          letter-spacing: 0.2rem;
+          @include NormalFont();
+        }
+      }
+    }
+  }
+}

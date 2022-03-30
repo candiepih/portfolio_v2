@@ -1,15 +1,16 @@
+import styles from "../../styles/footer/Footer.module.scss";
+import SocialLinks from "../sub_components/SocialLinks";
+import Logo from "../sub_components/Logo"
+
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="content has-text-centered">
-          {/* logo here */}
-          <p>Find me on:</p>
-          <div className="social-links">
-            <a href="#" className={styles.socialLinks}>LinkedIn</a>
-            <a href="#" className={styles.socialLinks}>Github</a>
-            <a href="#" className={styles.socialLinks}>Twitter</a>
-            <a href="#" className={styles.socialLinks}>Whatsapp</a>
+    <footer className={styles.footer}>
+      <div className={styles.sectionContainer}>
+        <div className={styles.content}>
+          <Logo color2="#FFFF00" />
+          <p className={styles.socialLinksInfo}>Find me on</p>
+          <div className={styles.socialLinks}>
+            <SocialLinks />
           </div>
           <p>Handcrafted by Me with passion.<br />
             Alex Steve. Copyright © all rights reserved 2020</p>

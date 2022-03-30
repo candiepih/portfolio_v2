@@ -1,0 +1,22 @@
+@import "../utils";
+
+.footer {
+  width: 100%;
+  background-color: $primary-color-2;
+  overflow: hidden;
+  @include flex(column, center);
+  align-items: center;
+  align-content: center;
+  color: $primary-color-1;
+  text-align: center;
+  padding: 20px 0;
+
+  .socialLinksInfo {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .socialLinks {
+    @include flex(row, center);
+  }
+}

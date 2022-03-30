@@ -34,16 +34,20 @@
             cursor: pointer;
           }
 
-          .skillsButton {
-            @include buttonWithoutOutline();
+          .skillsButton,
+          .downloadButton {
+            @include NormalFont();
+            letter-spacing: 0.2rem;
             width: 200px;
             height: 45px;
           }
 
+          .skillsButton {
+            @include buttonWithoutOutline();
+          }
+
           .downloadButton {
             @include buttonWithOutline();
-            width: 200px;
-            height: 45px;
           }
         }
       }
