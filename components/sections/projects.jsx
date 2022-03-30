@@ -1,188 +1,71 @@
 import styles from '../../styles/projects_section/Projects.module.scss';
-import { useEffect, useRef } from 'react';
-import Image from "next/image";
-import Headings from '../minorSections/Headings';
+import Headings from '../sub_components/Headings';
 
 const Projects = () => {
-  const webDevRef = useRef(null);
-  const gameDevRef = useRef(null);
-
-  useEffect(() => {
-    const webDevParent = document.querySelector('#webProjects');
-    const gameDevParent = document.querySelector('#gameProjects');
-    webDevRef.current.addEventListener('click', () => {
-      // toggle for web dev
-      if (webDevParent.classList.contains(styles.hide)) {
-        webDevParent.classList.remove(styles.hide);
-        gameDevParent.classList.add(styles.hide);
-      }
-    });
-    gameDevRef.current.addEventListener('click', () => {
-      // toggle for game dev
-      if (gameDevParent.classList.contains(styles.hide)) {
-        gameDevParent.classList.remove(styles.hide);
-        webDevParent.classList.add(styles.hide);
-      }
-    });
-  });
-
-
   return (
     <div className={styles.projects}>
-      <div className={styles.contentContainer}>
-        <Headings name={"projects"} />
-
-        <div className={styles.projectContainers}>
-          <div className={styles.containers}>
-            <div className={styles.left}>
-              <div className={`${styles.cardImage} ${styles.active}`} ref={webDevRef}>
-                <Image layout='fill' src='/images/webdev.jpg' alt='web development' />
-                <div className={styles.textHighlights}>
-                  <h3>Web<br />Development</h3>
-                  <p>5 Projects</p>
-                </div>
-              </div>
-              <div className={styles.cardImage} ref={gameDevRef}>
-                <Image layout='fill' src='/images/gamedev.jpg' alt='game development' />
-                <div className={styles.textHighlights}>
-                  <h3>Game<br />Development</h3>
-                  <p>3 Projects</p>
-                </div>
-              </div>
+      <div className={styles.sectionsContainer}>
+        <div className={styles.leftSection}>
+          <Headings main="Projects" sub="Recent" color="#FFAC11" leftAlign={true} />
+          <div className={styles.projectDetails}>
+            <p>Some of his recent works and projects</p>
+            <p>Work is what keeps me moving, learning and gaining experience. I have shortlisted some of the works that i have indulged myself in lately</p>
+          </div>
+        </div>
+        <div className={styles.rightSection}>
+          <div className={styles.card}>
+            <div className={styles.number}>
+              <p>01.</p>
             </div>
-            <div className={styles.center}>
+            <div className={styles.details}>
+              <p className={styles.name}>Password Safe</p>
+              <p className={styles.type}>Web extension</p>
+              <p className={styles.date}>JUL 2021 - JUL 2021</p>
             </div>
-            <div className={styles.right}>
-              <div id="webProjects">
-                <div className={styles.card}>
-                  <div className={styles.dot}></div>
-                  <p className={styles.projectTitle}>Password Safe</p>
-                  <div className={styles.details}>
-                    <p>Web Extension</p>
-                    <p>JUN 2021 - JUL 2021</p>
-                    <p>Personal</p>
-                  </div>
-                  <p className={styles.description}>Work is what keeps me moving, learning and gaining experience.
-                    I have shortlisted some of the works that i have indulged myself in lately
-                  </p>
-                  <p className={styles.skills}>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Javascript</span>
-                    <span>Typescript</span>
-                    <span>SCSS</span>
-                  </p>
-                  <a href='#'><span>Source code</span></a>
-                </div>
+            <div className={styles.icon}>
+              <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="30" height="30"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" /></svg>
+            </div>
+          </div>
 
-                <div className={styles.card}>
-                  <div className={styles.dot}></div>
-                  <p className={styles.projectTitle}>Password Safe</p>
-                  <div className={styles.details}>
-                    <p>Web Extension</p>
-                    <p>JUN 2021 - JUL 2021</p>
-                    <p>Personal</p>
-                  </div>
-                  <p className={styles.description}>Work is what keeps me moving, learning and gaining experience.
-                    I have shortlisted some of the works that i have indulged myself in lately
-                  </p>
-                  <p className={styles.skills}>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Javascript</span>
-                    <span>Typescript</span>
-                    <span>SCSS</span>
-                  </p>
-                  <a href='#'><span>Source code</span></a>
-                </div>
+          <div className={styles.card}>
+            <div className={styles.number}>
+              <p>02.</p>
+            </div>
+            <div className={styles.details}>
+              <p className={styles.name}>Password Safe</p>
+              <p className={styles.type}>Web extension</p>
+              <p className={styles.date}>JUL 2021 - JUL 2021</p>
+            </div>
+            <div className={styles.icon}>
+              <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="30" height="30"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" /></svg>
+            </div>
+          </div>
 
-                <div className={styles.card}>
-                  <div className={styles.dot}></div>
-                  <p className={styles.projectTitle}>Password Safe</p>
-                  <div className={styles.details}>
-                    <p>Web Extension</p>
-                    <p>JUN 2021 - JUL 2021</p>
-                    <p>Personal</p>
-                  </div>
-                  <p className={styles.description}>Work is what keeps me moving, learning and gaining experience.
-                    I have shortlisted some of the works that i have indulged myself in lately
-                  </p>
-                  <p className={styles.skills}>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Javascript</span>
-                    <span>Typescript</span>
-                    <span>SCSS</span>
-                  </p>
-                  <a href='#'><span>Source code</span></a>
-                </div>
-              </div>
+          <div className={styles.card}>
+            <div className={styles.number}>
+              <p>03.</p>
+            </div>
+            <div className={styles.details}>
+              <p className={styles.name}>Password Safe</p>
+              <p className={styles.type}>Web extension</p>
+              <p className={styles.date}>JUL 2021 - JUL 2021</p>
+            </div>
+            <div className={styles.icon}>
+              <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="30" height="30"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" /></svg>
+            </div>
+          </div>
 
-              <div id='gameProjects' className={styles.hide}>
-                <div className={styles.card}>
-                  <div className={styles.dot}></div>
-                  <p className={styles.projectTitle}>Buggy Man</p>
-                  <div className={styles.details}>
-                    <p>Web Extension</p>
-                    <p>JUN 2021 - JUL 2021</p>
-                    <p>Personal</p>
-                  </div>
-                  <p className={styles.description}>Work is what keeps me moving, learning and gaining experience.
-                    I have shortlisted some of the works that i have indulged myself in lately
-                  </p>
-                  <p className={styles.skills}>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Javascript</span>
-                    <span>Typescript</span>
-                    <span>SCSS</span>
-                  </p>
-                  <a href='#'><span>Source code</span></a>
-                </div>
-
-                <div className={styles.card}>
-                  <div className={styles.dot}></div>
-                  <p className={styles.projectTitle}>Password Safe</p>
-                  <div className={styles.details}>
-                    <p>Web Extension</p>
-                    <p>JUN 2021 - JUL 2021</p>
-                    <p>Personal</p>
-                  </div>
-                  <p className={styles.description}>Work is what keeps me moving, learning and gaining experience.
-                    I have shortlisted some of the works that i have indulged myself in lately
-                  </p>
-                  <p className={styles.skills}>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Javascript</span>
-                    <span>Typescript</span>
-                    <span>SCSS</span>
-                  </p>
-                  <a href='#'><span>Source code</span></a>
-                </div>
-
-                <div className={styles.card}>
-                  <div className={styles.dot}></div>
-                  <p className={styles.projectTitle}>Password Safe</p>
-                  <div className={styles.details}>
-                    <p>Web Extension</p>
-                    <p>JUN 2021 - JUL 2021</p>
-                    <p>Personal</p>
-                  </div>
-                  <p className={styles.description}>Work is what keeps me moving, learning and gaining experience.
-                    I have shortlisted some of the works that i have indulged myself in lately
-                  </p>
-                  <p className={styles.skills}>
-                    <span>CSS</span>
-                    <span>HTML</span>
-                    <span>Javascript</span>
-                    <span>Typescript</span>
-                    <span>SCSS</span>
-                  </p>
-                  <a href='#'><span>Source code</span></a>
-                </div>
-              </div>
-
+          <div className={styles.card}>
+            <div className={styles.number}>
+              <p>04.</p>
+            </div>
+            <div className={styles.details}>
+              <p className={styles.name}>Password Safe</p>
+              <p className={styles.type}>Web extension</p>
+              <p className={styles.date}>JUL 2021 - JUL 2021</p>
+            </div>
+            <div className={styles.icon}>
+              <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="30" height="30"><path d="M23.12,9.91,19.25,6a1,1,0,0,0-1.42,0h0a1,1,0,0,0,0,1.41L21.39,11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H21.45l-3.62,3.61a1,1,0,0,0,0,1.42h0a1,1,0,0,0,1.42,0l3.87-3.88A3,3,0,0,0,23.12,9.91Z" /></svg>
             </div>
           </div>
         </div>

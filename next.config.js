@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
-const withTM = require("next-transpile-modules")(["gsap"]);
+// const withTM = require("next-transpile-modules")(["gsap"]);
 
 const nextConfig = {
   reactStrictMode: true,
@@ -9,4 +9,5 @@ const nextConfig = {
   },
 }
 
-module.exports = withTM(nextConfig);
+// module.exports = withTM(nextConfig);
+module.exports = nextConfig;

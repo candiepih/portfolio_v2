@@ -1,0 +1,17 @@
+@import "../utils";
+
+.logo {
+  h1 {
+    @include HeadingsFont();
+    font-weight: 500;
+
+    span:nth-child(1) {
+      color: white;
+    }
+
+    span:nth-child(2) {
+      display: inline-block;
+      transform: translateY(10px);
+    }
+  }
+}

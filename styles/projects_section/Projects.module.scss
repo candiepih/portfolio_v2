@@ -1,295 +1,74 @@
-@import 'utils/utils';
-@import 'utils/media';
+@import "../utils";
 
 .projects {
-  overflow: hidden;
-  background-image: url('/images/Projects.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $primary-color-2;
+  color: white;
+  @include alignSectionCenter();
 
-  .contentContainer {
-    width: 80%;
-    margin: 150px auto;
+  .sectionsContainer {
+    @include sectionsContainer();
 
-    @include media("<750px") {
-      margin: 50px auto;
-    }
+    .leftSection {
+      width: 50%;
 
-    .headings {
-      @include HeadingsFont();
-      text-transform: uppercase;
-      text-align: center;
-
-      // margin: 0;
-      position: relative;
-
-      h1:nth-child(1) {
-        font-size: 150px;
-        color: #ffb833;
-        position: absolute;
-        @include centerAbsDivLeft();
-        line-height: 0;
-        z-index: 0;
-        @include textOutline(#FFAC11, gold, 0.2rem);
-
-        @include media("<800px") {
-          font-size: 120px;
-          // bottom: 70%;
-        }
-
-        @include media("<455px") {
-          font-size: 100px;
-        }
-      }
-
-      h1:nth-child(2) {
-        position: relative;
-        z-index: 1;
-        font-size: 100px;
-        line-height: 0;
-        display: inline-block;
-        transform: translate(0, 25px);
-
-        @include media("<455px") {
-          font-size: 60px;
-        }
+      // background-color: blue;
+      .projectDetails {
+        margin: 50px 0;
+        max-width: 350px;
+        margin-left: 50px;
       }
     }
 
-    .projectContainers {
-      margin-top: 150px;
+    .rightSection {
+      width: 40%;
+      // background-color: green;
 
-      .containers {
-        @include display(flex, row, center);
+      .card {
+        @include flex(row, left);
+        background-color: #1B1B1B;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        cursor: pointer;
 
-        @include media("<750px") {
-          @include display(flex, column, center);
+        .number {
+          color: #525252;
+          margin-right: 20px;
+          font-weight: 700;
         }
 
-        .left {
-          @include display(flex, column, top);
-          width: 49%;
+        .details {
+          width: 70%;
 
-          @include media("<750px") {
-            @include display(flex, row, center);
-            width: 100%;
-            height: 200px;
-          }
+          .name {
+            color: $main-color;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
 
-          @include media("<575px") {
-            overflow: scroll;
-            scrollbar-width: none;
-
-            &::-webkit-scrollbar {
-              display: none;
-            }
-
-            @include display(flex, row, left);
-          }
-
-          .cardImage {
-            width: 70%;
-            margin: 0 auto;
-            margin-bottom: 50px;
-            position: relative;
-            background-color: #FFAE00;
-            border-radius: 10px;
-            overflow: hidden;
-            height: 280px;
-            max-height: 280px;
-
-            @include media("<750px") {
-              width: 47%;
-              height: 150px;
-              min-width: 250px;
-              margin-right: 5px;
-
-              &::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                background-color: rgba($color: #000000, $alpha: .4);
-                z-index: 0;
-              }
-            }
-
-            img {
-              mix-blend-mode: luminosity;
-              cursor: pointer;
-              object-fit: cover;
-              object-position: center;
-            }
-
-            &:hover {
-              img {
-                mix-blend-mode: normal;
-              }
-            }
-
-            .textHighlights {
-              position: absolute;
-              bottom: 0;
-              right: 20px;
-              text-transform: uppercase;
-              text-align: right;
-              z-index: 1;
-
-              h3 {
-                line-height: 25px;
-                color: gold;
-                @include HeadingsFont();
-                font-weight: 300;
-                font-size: 1.5rem;
-                transition: 0.4s ease-in-out;
-              }
-
-              p {
-                color: white;
-                font-weight: 300;
-                font-size: 0.8rem;
-                margin-top: -20px;
-              }
+            h1 {
+              line-height: 0;
             }
           }
 
-          // .active {
-          //   img {
-          //     mix-blend-mode: normal;
-          //   }
+          .type,
+          .date {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-top: -10px;
+          }
 
-          //   h3 {
-          //     color: white;
-          //   }
-          // }
+          .date {
+            color: #8d8d8d;
+          }
         }
 
-        .center {
-          width: 1px;
-          background-color: #ffdc69;
-          margin: 0 20px;
-          position: relative;
-        }
+        .icon {
+          @include alignSectionCenter();
 
-        .right {
-          width: 49%;
-
-          @include media("<750px") {
-            width: 100%;
-            border-left: 1px solid #ffdc69;
-            padding-left: 30px;
-          }
-
-          .hide {
-            display: none;
-          }
-
-          .card {
-            position: relative;
-            width: 100%;
-            margin-bottom: 20px;
-            @include display(flex, column, center);
-
-            .dot {
-              width: 10px;
-              height: 10px;
-              border-radius: 50%;
-              position: absolute;
-              top: 32px;
-              left: -21px;
-              transform: translateX(-50%);
-              background-color: black;
-
-              @include media("<750px") {
-                left: -30px;
-              }
-            }
-
-            .projectTitle {
-              @include HeadingsFont();
-              font-size: 1.5rem;
-              text-transform: uppercase;
-            }
-
-            a {
-              max-width: 90px;
-              position: relative;
-
-              span {
-                color: #000000;
-                display: inline-block;
-                text-transform: uppercase;
-                font-size: 0.8rem;
-                font-weight: 900;
-                transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                position: relative;
-                z-index: 1;
-              }
-
-              &::before {
-                content: '';
-                display: inline-block;
-                width: 100%;
-                height: 7px;
-                position: absolute;
-                background-color: gold;
-                transform: translateY(12px);
-                z-index: 0;
-              }
-            }
-
-            .description {
-              max-width: 400px;
-              color: white;
-              font-weight: 300;
-              margin-top: -5px;
-            }
-
-            .skills {
-              width: 200px;
-              // float: right;
-              margin-top: -5px;
-
-              span {
-                display: inline-block;
-                background-color: black;
-                color: gold;
-                margin: 2px 0px;
-                margin-right: 5px;
-                padding: 5px 10px;
-                border-radius: 20px;
-                text-transform: uppercase;
-                font-size: 0.7rem;
-              }
-            }
-
-            .details {
-              margin-top: -20px;
-
-              p:nth-child(1) {
-                font-weight: 900;
-                font-size: 0.7rem;
-                text-transform: uppercase;
-              }
-
-              p:nth-child(2) {
-                font-weight: 300;
-                text-transform: uppercase;
-                color: white;
-                margin-top: -5px;
-                font-size: 0.7rem;
-              }
-
-              p:nth-child(3) {
-                text-transform: uppercase;
-                font-weight: 700;
-                font-size: 0.7rem;
-                margin-top: -5px;
-              }
-            }
+          svg {
+            fill: $main-color;
           }
         }
       }

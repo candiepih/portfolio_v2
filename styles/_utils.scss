@@ -1,0 +1,61 @@
+$main-color: #FFAC11;
+$main-color-shade: #FFB62E;
+$primary-color-1: white;
+$primary-color-2: black;
+$secondary-color: #FFFF00;
+
+@mixin HeadingsFont {
+  font-family: 'Anton',
+    sans-serif;
+}
+
+@mixin NormalFont {
+  font-family: 'Space Grotesk',
+    sans-serif;
+}
+
+@mixin flex($direction, $justify-content) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+}
+
+
+@mixin textOutline($textColor, $outlineColor, $letter-spacing) {
+  color: $textColor;
+  text-shadow: -1px -1px 0 $outlineColor,
+    1px -1px 0 $outlineColor,
+    -1px 1px 0 $outlineColor,
+    1px 1px 0 $outlineColor;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin buttonWithOutline() {
+  outline: none;
+  border: 2px solid $secondary-color;
+  background-color: transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+@mixin buttonWithoutOutline() {
+  outline: none;
+  border: none;
+  background-color: $secondary-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary-color-2;
+}
+
+@mixin sectionsContainer() {
+  width: 70%;
+  margin: 0 auto;
+  @include flex(row, center);
+}
+
+@mixin alignSectionCenter () {
+  @include flex(column, center);
+  align-items: center;
+  align-content: center;
+}
