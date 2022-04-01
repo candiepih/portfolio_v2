@@ -4,7 +4,7 @@ import About from '../components/sections/about';
 import Projects from '../components/sections/projects';
 import Contact from '../components/sections/contact';
 import Footer from '../components/sections/footer';
-// import Scroll from '../components/Scroll';
+import Scroll from '../components/Scroll';
 import FixedSections from '../components/sections/FixedSections';
 import React from 'react';
 // import gsap from "gsap";
@@ -21,13 +21,13 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#FFA600" />
       </Head>
       <FixedSections />
-      {/* <Scroll> */}
-      <LandingPage />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-      {/* </Scroll> */}
+      <Scroll>
+        <LandingPage />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </Scroll>
     </React.Fragment>
   )
 }

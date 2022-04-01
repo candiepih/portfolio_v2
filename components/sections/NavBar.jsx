@@ -1,5 +1,6 @@
 import styles from "../../styles/fixed_sections/navbar.module.scss";
 import Logo from "../sub_components/Logo";
+import SocialLinks from "../sub_components/SocialLinks";
 
 const NavBar = () => {
   return (
@@ -16,6 +17,21 @@ const NavBar = () => {
           </ul>
         </div>
         <div className={styles.mobile}>
+          <div className={styles.hamburger}>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+          </div>
+          <div className={styles.drawer}>
+            <ul>
+              <li><a href="#"><span>01/</span>About</a></li>
+              <li><a href="#"><span>02/</span>Projects</a></li>
+              <li><a href="#"><span>03/</span>Contact</a></li>
+            </ul>
+            <div className={styles.mobileNavsocialLinks}>
+              <SocialLinks />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+@import "./media/media";
+
 $main-color: #FFAC11;
 $main-color-shade: #FFB62E;
 $primary-color-1: white;
@@ -52,6 +54,14 @@ $secondary-color: #FFFF00;
   width: 70%;
   margin: 0 auto;
   @include flex(row, center);
+
+  @include media("<850px") {
+    @include flex(column, center);
+  }
+
+  @include media("<550px") {
+    width: 90%;
+  }
 }
 
 @mixin alignSectionCenter () {

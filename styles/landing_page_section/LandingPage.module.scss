@@ -1,4 +1,5 @@
 @import "../utils";
+@import "../media/media";
 
 .landingPage {
   width: 100%;
@@ -7,10 +8,19 @@
   @include flex(row, center);
   align-items: center;
   align-content: center;
+  position: relative;
+
+  @include media("<850px") {
+    @include flex(column, center);
+  }
 
   .leftSection,
   .rightSection {
     width: 50%;
+
+    @include media("<550px") {
+      width: 80%;
+    }
   }
 
   .leftSection {
@@ -19,6 +29,10 @@
       height: 50%;
       float: right;
       margin-right: 80px;
+
+      @include media("<850px") {
+        display: none;
+      }
 
       img {
         object-fit: cover;
@@ -29,7 +43,6 @@
   }
 
   .rightSection {
-
     h1 {
       @include HeadingsFont();
       text-transform: uppercase;
@@ -40,6 +53,26 @@
       line-height: 90px;
       position: relative;
       margin-bottom: -40px;
+
+      @include media("<1130px") {
+        font-size: 35px;
+      }
+
+      @include media("<950px") {
+        font-size: 30px;
+      }
+
+      @include media("<340px") {
+        font-size: 27px;
+      }
+
+      @include media("<305px") {
+        font-size: 25px;
+      }
+
+      @include media("<281px") {
+        line-height: 55px;
+      }
 
       h1 {
         position: relative;
@@ -64,8 +97,7 @@
     .title {
       text-transform: uppercase;
       font-weight: 500;
-
-      // span:nth-child(1) {}
+      margin-top: 70px;
 
       span:nth-child(3) {
         color: white;
@@ -80,6 +112,10 @@
     color: $primary-color-1;
     position: relative;
     margin-bottom: -40px;
+
+    @include media("<281px") {
+      margin-bottom: -20px;
+    }
 
     &::before {
       content: '';
@@ -98,6 +134,10 @@
     right: 40px;
     bottom: 0;
     color: $secondary-color;
+
+    @include media("<850px") {
+      display: none;
+    }
 
     p {
       font-weight: bold;
@@ -142,119 +182,4 @@
       }
     }
   }
-
-
-  // Mobile navigation
-  // .mobileContainer {
-
-  //   // background-color: black;
-  //   @include media(">550px") {
-  //     display: none;
-  //   }
-
-  //   .hamburger {
-  //     width: 40px;
-  //     height: 40px;
-  //     // background: black;
-  //     border: none;
-  //     outline: none;
-  //     cursor: pointer;
-  //     position: absolute;
-  //     bottom: 15px;
-  //     right: 20px;
-  //     z-index: 3;
-  //     @include display(flex, column, center);
-
-  //     .line:nth-child(1) {
-  //       width: 30%;
-  //       height: 3px;
-  //       margin: 3px 0;
-  //       background-color: white;
-  //     }
-
-  //     .line:nth-child(2) {
-  //       width: 100%;
-  //       height: 3px;
-  //       margin: 5px 0;
-  //       background-color: white;
-  //       align-self: center;
-  //     }
-
-  //     .line:nth-child(3) {
-  //       width: 30%;
-  //       height: 3px;
-  //       margin: 3px 0;
-  //       background-color: white;
-  //       align-self: flex-end;
-  //     }
-  //   }
-
-  //   .drawer {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 100vh;
-  //     background-color: black;
-  //     @include display(flex, row, left);
-  //     align-items: center;
-  //     align-content: center;
-  //     display: none;
-
-  //     ul {
-  //       @include HeadingsFont();
-
-  //       li {
-  //         list-style-type: none;
-  //         margin: 30px 0;
-
-  //         a {
-  //           text-transform: uppercase;
-  //           font-weight: 700;
-  //           letter-spacing: 0.2rem;
-  //           font-size: 3rem;
-  //           color: white;
-  //           transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
-
-  //           &:hover {
-  //             @include textOutline(black, gold, 0.25rem);
-  //           }
-  //         }
-  //       }
-  //     }
-
-  //     .mobileNavsocialLinks {
-  //       position: absolute;
-  //       bottom: 0;
-  //       @include centerAbsDivLeft();
-  //       z-index: 3;
-  //       height: 200px;
-  //       @include display(flex, row, space-around);
-  //       align-items: center;
-  //       align-content: center;
-
-  //       a {
-  //         border-radius: 50%;
-  //         padding: 3px;
-  //         display: block;
-  //         width: 35px;
-  //         height: 35px;
-  //         margin: 0 10px;
-  //         background: rgb(255, 166, 0);
-  //         background: radial-gradient(circle, rgba(255, 166, 0, 1) 10%, rgb(255, 217, 0) 100%);
-  //         transition: 0.5s ease-in-out;
-
-  //         &:hover {
-  //           background: rgb(255, 255, 255);
-  //           background: radial-gradient(circle, rgba(255, 255, 255, 1) 10%, rgb(255, 255, 255) 100%);
-  //         }
-
-  //         img {
-  //           width: 100%;
-  //           height: 100%;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }

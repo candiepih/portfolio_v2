@@ -1,9 +1,11 @@
 @import "../utils";
 
 .logo {
+
   h1 {
     @include HeadingsFont();
     font-weight: 500;
+
 
     span:nth-child(1) {
       color: white;
