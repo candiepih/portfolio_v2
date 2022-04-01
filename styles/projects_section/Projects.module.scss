@@ -1,4 +1,5 @@
 @import "../utils";
+@import "../media/media";
 
 .projects {
   width: 100%;
@@ -10,20 +11,50 @@
   .sectionsContainer {
     @include sectionsContainer();
 
+    @include media("<850px") {
+      margin: 120px 0;
+    }
+
     .leftSection {
       width: 50%;
+
+      @include media("<850px") {
+        width: 100%;
+      }
 
       // background-color: blue;
       .projectDetails {
         margin: 50px 0;
         max-width: 350px;
         margin-left: 50px;
+
+        @include media("<1080px") {
+          margin-left: 10px;
+          margin-right: 20px;
+        }
+
+        @include media("<1000px") {
+          margin-left: 0;
+        }
+
+        @include media("<850px") {
+          max-width: 90%;
+          margin: 50px 0;
+        }
       }
     }
 
     .rightSection {
       width: 40%;
+
       // background-color: green;
+      @include media("<1000px") {
+        width: 50%;
+      }
+
+      @include media("<850px") {
+        width: 100%;
+      }
 
       .card {
         @include flex(row, left);

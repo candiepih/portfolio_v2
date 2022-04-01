@@ -1,4 +1,5 @@
 @import "../utils";
+@import "../media/media";
 
 .contact {
   width: 100%;
@@ -13,14 +14,30 @@
   .sectionsContainer {
     @include sectionsContainer();
 
+    @include media("<850px") {
+      padding-bottom: 100px;
+    }
+
     .leftSection {
       width: 40%;
       color: white;
+
+      @include media("<850px") {
+        width: 100%;
+      }
 
       .boldTitle {
         font-size: 3.2rem;
         font-weight: bold;
         margin-top: -20px;
+
+        @include media("<1130px") {
+          font-size: 3rem;
+        }
+
+        @include media("<1050px") {
+          font-size: 2.5rem;
+        }
 
         span {
           color: $secondary-color;
@@ -29,19 +46,36 @@
 
       .details {
         margin-left: 30px;
+
+        @include media("<1050px") {
+          margin: 0;
+          margin-bottom: 70px;
+        }
       }
     }
 
     .rightSection {
       width: 60%;
 
+      @include media("<850px") {
+        width: 100%;
+      }
+
       form {
         margin-left: 50px;
+
+        @include media("<850px") {
+          margin: 0;
+        }
 
         .inputGroup {
           width: 100%;
           margin-bottom: 40px;
           @include flex(row, space-between);
+
+          @include media("<850px") {
+            @include flex(column, center);
+          }
 
           input {
             width: 48%;
@@ -50,6 +84,11 @@
             height: 45px;
             padding: 0 10px;
             @include NormalFont();
+
+            @include media("<850px") {
+              width: 100%;
+              margin-top: 20px;
+            }
 
             &:focus {
               outline: none;

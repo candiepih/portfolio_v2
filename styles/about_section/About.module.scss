@@ -24,7 +24,7 @@
       }
 
       @include media("<850px") {
-        display: inline-block;
+        width: 100%;
       }
     }
 
