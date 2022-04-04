@@ -13,7 +13,7 @@ const LandingPage = () => {
         <div className={styles.name}>
           <h1><span>Alex</span> Njagi</h1>
         </div>
-        <h1 className={styles.title}>A <span>Full stack</span><br /><span>Web developer</span></h1>
+        <h1 className={styles.title}>A <span>full stack</span><br /><span>Web developer</span></h1>
         <a href='#'>
           <button>
             <p>About Me</p>

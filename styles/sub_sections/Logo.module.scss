@@ -14,6 +14,8 @@
     span:nth-child(2) {
       display: inline-block;
       transform: translateY(10px);
+      // color: $secondary-color;
+      color: rgba($color: $primary-color-1, $alpha: 0.5);
     }
   }
 }

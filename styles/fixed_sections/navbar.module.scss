@@ -10,10 +10,12 @@
   align-items: center;
   padding: 0 50px;
   z-index: 2;
+  // mix-blend-mode: luminosity;
 
-  // background-color: rgba(255, 255, 255, 0);
-  // backdrop-filter: blur(40px);
-  // -webkit-backdrop-filter: blur(40px);
+  background: rgba(255, 172, 17, 0);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
   @include media("<850px") {
     padding: 0 20px;
   }
@@ -37,10 +39,10 @@
           font-weight: bold;
 
           a {
-            color: $primary-color-2;
+            color: $primary-color-1;
 
             &:hover {
-              color: $secondary-color;
+              color: rgba($color: $primary-color-1, $alpha: 0.7);
             }
           }
         }
@@ -146,28 +148,6 @@
           @include flex(row, center);
           align-items: center;
           align-content: center;
-
-          // a {
-          //   border-radius: 50%;
-          //   padding: 3px;
-          //   display: block;
-          //   width: 35px;
-          //   height: 35px;
-          //   margin: 0 10px;
-          //   background: rgb(255, 166, 0);
-          //   background: radial-gradient(circle, rgba(255, 166, 0, 1) 10%, rgb(255, 217, 0) 100%);
-          //   transition: 0.5s ease-in-out;
-
-          //   &:hover {
-          //     background: rgb(255, 255, 255);
-          //     background: radial-gradient(circle, rgba(255, 255, 255, 1) 10%, rgb(255, 255, 255) 100%);
-          //   }
-
-          //   img {
-          //     width: 100%;
-          //     height: 100%;
-          //   }
-          // }
         }
       }
     }
