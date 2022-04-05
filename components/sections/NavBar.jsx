@@ -25,11 +25,11 @@ const NavBar = () => {
 
   return (
     <div className={styles.navbar}>
-      <div className={styles.navbarLogo}>
-        <Link href="/">
+      <Link href="/">
+        <div className={styles.navbarLogo}>
           <Logo />
-        </Link>
-      </div>
+        </div>
+      </Link>
       <div className={styles.navbarLinks}>
         <div className={styles.default}>
           <ul>

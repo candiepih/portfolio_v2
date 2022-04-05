@@ -1,0 +1,41 @@
+@import "../utils";
+@import "../media/media";
+
+.mailResponseModal {
+  position: fixed;
+  bottom: 50px;
+  left: 150px;
+  background-color: $secondary-color;
+  z-index: 2;
+  max-width: 400px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 7px 21px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 7px 21px 8px rgba(0, 0, 0, 0.15);
+  display: none;
+
+  @include media("<750px") {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+  }
+
+  @include media("<550px") {
+    width: 90%;
+  }
+
+  .mailResponseModalContainer {
+    margin: 10px;
+
+    .message {
+      font-size: 0.8rem;
+    }
+
+    .closeModal {
+      text-decoration: underline dotted;
+      cursor: pointer;
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+  }
+
+}
