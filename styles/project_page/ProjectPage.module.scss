@@ -150,11 +150,19 @@
   position: fixed;
   top: 0;
   width: 100%;
+  height: 80px;
   z-index: 2;
 
   background: rgba(255, 172, 17, 0);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
+
+  @include media("<450px") {
+    height: 70px;
+    @include flex(row, center);
+    align-items: center;
+    align-content: center;
+  }
 
   .container {
     @include flex(row, space-between);
@@ -164,6 +172,9 @@
     // mix-blend-mode: difference;
 
     .backButton {
+      @include media("<450px") {
+        padding-top: 5px;
+      }
 
       a {
         color: $primary-color-1;
@@ -175,6 +186,16 @@
 
         svg {
           fill: $primary-color-1;
+        }
+      }
+
+      &:hover {
+        a {
+          color: $secondary-color;
+
+          svg {
+            fill: $secondary-color;
+          }
         }
       }
     }
@@ -195,6 +216,14 @@
 
     @include media("<1100px") {
       width: 80%;
+    }
+
+    @include media("<750px") {
+      margin: 0 auto;
+    }
+
+    @include media("<450px") {
+      width: 90%;
     }
 
     .projectDetails {
