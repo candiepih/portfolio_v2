@@ -25,6 +25,7 @@
 
       @include media("<850px") {
         width: 100%;
+        @include flex(row, right);
       }
     }
 

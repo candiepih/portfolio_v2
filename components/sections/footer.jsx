@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.sectionContainer}>
         <div className={styles.content}>
-          <Logo color2="#FFFF00" />
+          <Logo />
           <p className={styles.socialLinksInfo}>Find me on</p>
           <div className={styles.socialLinks}>
             <SocialLinks />
