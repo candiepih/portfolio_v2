@@ -1,4 +1,5 @@
 @import "../utils";
+@import "../media/media";
 
 .projectsLanding {
   width: 100%;
@@ -9,19 +10,44 @@
   align-items: center;
   align-content: center;
 
+  @include media("<650px") {
+    height: auto;
+  }
+
   .headerDetails {
     width: 70%;
     margin: 0 auto;
     @include flex(row, space-between);
 
+    @include media("<800px") {
+      @include flex(column, center);
+    }
+
+    @include media("<600px") {
+      padding-top: 200px;
+    }
+
+    @include media("<450px") {
+      width: 90%;
+    }
+
     .title {
       width: 50%;
 
+      @include media("<1000px") {
+        width: 60%;
+      }
+
+      @include media("<800px") {
+        width: 100%;
+      }
+
       h1 {
-        font-size: 80px;
-        // @include HeadingsFont();
-        // font-weight: 500;
-        // text-transform: uppercase;
+        font-size: 60px;
+
+        @include media("<1205px") {
+          font-size: 50px;
+        }
       }
 
       .shortP {
@@ -38,8 +64,22 @@
 
     .links {
       @include flex(column, center);
-      font-size: 40px;
+      font-size: 30px;
 
+      @include media("<800px") {
+        @include flex(row, left);
+        margin-top: 20px;
+
+        a {
+          &:nth-child(1) {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      @include media("<455px") {
+        @include flex(column, center);
+      }
 
       a {
         color: white;
@@ -59,6 +99,26 @@
     color: white;
     @include flex(row, space-around);
     padding: 10px;
+
+    @include media("<950px") {
+      width: 70%;
+    }
+
+    @include media("<650px") {
+      position: relative;
+      transform: translate(0, 0);
+      left: 0;
+      margin: 0 auto;
+    }
+
+    @include media("<600px") {
+      width: 100%;
+    }
+
+    @include media("<450px") {
+      @include flex(column, center);
+      padding: 20px 30px;
+    }
 
     .detailContainer {
       p:nth-child(1) {
@@ -90,7 +150,11 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+
+  background: rgba(255, 172, 17, 0);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
 
   .container {
     @include flex(row, space-between);
@@ -128,18 +192,26 @@
     width: 70%;
     margin: 100px auto;
     color: white;
-    // @include flex(row, space-around);
-    // align-items: center;
-    // align-content: center;
+
+    @include media("<1100px") {
+      width: 80%;
+    }
 
     .projectDetails {
       @include flex(row, center);
       margin: 50px 0;
-      // border-bottom: 1px solid rgb(80, 80, 80);
+
+      @include media("<750px") {
+        @include flex(column, center);
+      }
 
       .details {
         width: 50%;
         margin-bottom: 50px;
+
+        @include media("<750px") {
+          width: 100%;
+        }
       }
 
       .projectDetailsTitle {
@@ -147,9 +219,8 @@
 
         p {
           color: $main-color;
-          font-size: 30px;
-          // color: rgba($color: $secondary-color, $alpha: 1);
-          // text-transform: uppercase;
+          font-weight: 700;
+          text-transform: uppercase;
         }
       }
     }
@@ -168,18 +239,35 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 30px;
+
+    @include media("<550px") {
+      width: 100%;
+    }
   }
 
   .dividedImages {
     width: 80%;
-    height: 50vh;
+    height: auto;
     margin: 0 auto;
     @include flex(row, space-between);
     overflow: hidden;
 
+    @include media("<750px") {
+      @include flex(column, center);
+    }
+
+    @include media("<550px") {
+      width: 100%;
+    }
+
     .image {
       width: 49%;
-      height: 100%;
+      max-height: 400px;
+
+      @include media("<750px") {
+        width: 100%;
+        // margin-left: 30px;
+      }
 
       img {
         width: 100%;
@@ -194,18 +282,19 @@
 .footer {
   background-color: $primary-color-2;
   @include flex(row, center);
-  // align-items: center;
-  // align-content: center;
 
   .container {
     width: 80%;
     margin: 0 auto;
+    padding: 20px 0;
+    padding-top: 100px;
+    @include flex(row, space-between);
+
+    @include media("<700px") {
+      @include flex(column, center);
+    }
 
     .nextProject {
-      margin: 50px 0;
-      margin-top: 150px;
-      @include flex(row, space-between);
-
       a {
         color: $secondary-color;
 
@@ -225,10 +314,14 @@
           }
         }
       }
+    }
 
-      .footerDetails {
-        color: white;
-        text-align: right;
+    .footerDetails {
+      color: white;
+      text-align: right;
+
+      @include media("<700px") {
+        text-align: left;
       }
     }
   }

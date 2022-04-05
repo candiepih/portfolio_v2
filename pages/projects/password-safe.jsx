@@ -99,10 +99,10 @@ const Project = () => {
                 <h1>Next</h1>
                 <p><span>02.</span> BuggyMan</p>
               </a>
-              <div className={styles.footerDetails}>
-                <p>Handcrafted by Me with passion.<br />
-                  Alex Steve. Copyright © all rights reserved 2020</p>
-              </div>
+            </div>
+            <div className={styles.footerDetails}>
+              <p>Handcrafted by Me with passion.<br />
+                Alex Steve. Copyright © all rights reserved 2020</p>
             </div>
           </div>
         </div>
