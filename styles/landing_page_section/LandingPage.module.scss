@@ -160,30 +160,28 @@
     }
   }
 
-  a {
-    button {
-      color: $primary-color-2;
-      cursor: pointer;
-      outline: none;
-      border: none;
-      width: 200px;
-      height: 50px;
-      background-color: $secondary-color;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.2rem;
-      @include NormalFont();
-      @include flex(row, space-around);
-      align-items: center;
-      align-content: center;
+  button {
+    color: $primary-color-2;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 50px;
+    background-color: $secondary-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    @include NormalFont();
+    @include flex(row, space-around);
+    align-items: center;
+    align-content: center;
 
-      p {
-        margin-right: 20px;
-      }
+    p {
+      margin-right: 20px;
+    }
 
-      svg {
-        fill: black;
-      }
+    svg {
+      fill: black;
     }
   }
 }

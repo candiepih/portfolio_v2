@@ -3,13 +3,13 @@ import React from 'react';
 import SocialLinks from '../sub_components/SocialLinks';
 import NavBar from './NavBar';
 
-const FixedSections = () => {
+const FixedSections = ({ scrollbar }) => {
   return (
     <React.Fragment>
       <div className={styles.socialLinks}>
         <SocialLinks flexDirection="column" />
       </div>
-      <NavBar />
+      <NavBar scrollbar={scrollbar} />
     </React.Fragment>
   );
 }

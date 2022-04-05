@@ -3,7 +3,7 @@ import Headings from '../sub_components/Headings';
 
 const Contact = () => {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="contact">
       <div className={styles.headingContainer}>
         <Headings main="Contact" sub="me" />
       </div>
