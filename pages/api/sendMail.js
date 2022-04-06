@@ -8,8 +8,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "",
-    pass: ""
+    user: process.env.USER,
+    pass: process.env.NAME,
   }
 })
 
@@ -35,11 +35,11 @@ const send = ({ email, name, message }) => {
 const mailHandler = (req, res) => {
   send(req.body).then(() => {
     let data = { success: true };
-    res.json(JSON.stringify(data));
+    res.status(200).json(data);
 
   }).catch((error) => {
     let data = { success: false, error };
-    res.json(JSON.stringify(data));
+    res.status(200).json(data);
 
   })
 }
