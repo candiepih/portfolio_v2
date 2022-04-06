@@ -180,26 +180,23 @@
         padding-top: 5px;
       }
 
-      a {
-        color: $primary-color-1;
+      color: $primary-color-1;
+      cursor: pointer;
 
-        p {
-          margin-top: -10px;
-          font-weight: 700;
-        }
+      p {
+        margin-top: -10px;
+        font-weight: 700;
+      }
 
-        svg {
-          fill: $primary-color-1;
-        }
+      svg {
+        fill: $primary-color-1;
       }
 
       &:hover {
-        a {
-          color: $secondary-color;
+        color: $secondary-color;
 
-          svg {
-            fill: $secondary-color;
-          }
+        svg {
+          fill: $secondary-color;
         }
       }
     }
@@ -268,6 +265,7 @@
     height: 50vh;
     margin: 0 auto;
     margin-bottom: 30px;
+    position: relative;
 
     img {
       width: 100%;
@@ -283,9 +281,10 @@
 
   .dividedImages {
     width: 80%;
-    height: auto;
+    height: 400px;
     margin: 0 auto;
     @include flex(row, space-between);
+    position: relative;
     overflow: hidden;
 
     @include media("<750px") {
@@ -299,10 +298,10 @@
     .image {
       width: 49%;
       max-height: 400px;
+      position: relative;
 
       @include media("<750px") {
         width: 100%;
-        // margin-left: 30px;
       }
 
       img {

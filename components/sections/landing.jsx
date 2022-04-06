@@ -1,6 +1,8 @@
 import styles from '../../styles/landing_page_section/LandingPage.module.scss';
 import getActiveScrollbar from "../getScrollbarInstance";
 import { useEffect, useRef } from 'react';
+import SocialLinks from '../sub_components/SocialLinks';
+import socialLinkstyles from '../../styles/fixed_sections/social_links.module.scss';
 
 const LandingPage = () => {
   const aboutButton = useRef(null);
@@ -32,6 +34,9 @@ const LandingPage = () => {
         </button>
       </div>
       <div className={styles.scrollIndicator}><p>Scroll</p></div>
+      <div className={socialLinkstyles.socialLinks}>
+        <SocialLinks flexDirection="column" />
+      </div>
     </div>
   );
 }

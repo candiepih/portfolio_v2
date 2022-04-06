@@ -2,7 +2,8 @@
 @import '../media/media';
 
 .socialLinks {
-  position: fixed;
+  position: absolute;
+  // position: fixed;
   bottom: 0;
   left: 40px;
   width: 50px;
