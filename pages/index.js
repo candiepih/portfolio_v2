@@ -15,10 +15,11 @@ export default function Home() {
   return (
     <React.Fragment>
       <Head>
-        <title>Alex Steve fullstack web developer</title>
         <meta name="description" content="Alex steve portfolio" />
         <meta name="theme-color" content="#FFA600" />
         <meta name="msapplication-TileColor" content="#FFA600" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+        <title>Alex Njagi. Fullstack web developer</title>
       </Head>
       <FixedSections />
       <Scroll>
