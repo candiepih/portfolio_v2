@@ -1,6 +1,7 @@
 import styles from '../../styles/contact_section/Contact.module.scss';
 import Headings from '../sub_components/Headings';
 import { useState, useEffect } from 'react';
+import Modal from '../sub_components/Modal';
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -28,6 +29,8 @@ const Contact = () => {
     const nameInput = document.querySelector("#name");
     const emailInput = document.querySelector("#email");
     const messageInput = document.querySelector("#message");
+    const mailModal = document.querySelector("#mailModal");
+    const mailModalMessage = document.querySelector("#mailModalMessage");
     let hasErrors = false;
 
     restoreInputsDefaultBorder([nameInput, emailInput, messageInput]);
@@ -67,15 +70,16 @@ const Contact = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          el.target.value = "Submit";
-          el.target.disabled = false;
-          if (data.success) {
-            //  Handle success
-            console.log("sent");
-          } else {
+          thisButton.value = "Submit";
+          thisButton.disabled = false;
+          if (!data.success) {
             // Handle failure
-            console.log("failed");
+            mailModalMessage.innerText = "An error occured while sending your email. Please try again later.";
           }
+          mailModal.style.display = "block";
+          setTimeout(() => {
+            mailModal.style.display = "none";
+          }, 3000);
         });
     }
   };
