@@ -5,7 +5,8 @@ import styles from "../styles/sub_sections/scrollbar.module.scss";
 const Scroll = ({ children }) => {
   const options = {
     damping: 0.08,
-    thumbMinSize: 40,
+    thumbMinSize: 30,
+    alwaysShowTracks: true,
   }
 
   const scrollbarContainerRef = useRef(null);
