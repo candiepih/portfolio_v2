@@ -7,6 +7,11 @@
   background-color: $main-color;
   @include alignSectionCenter();
 
+  @include media("<530px") {
+    height: auto;
+    padding: 50px 0;
+  }
+
   .sectionsContainer {
     @include sectionsContainer();
 

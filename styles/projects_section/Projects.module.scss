@@ -9,11 +9,19 @@
   padding: 150px 0;
   @include alignSectionCenter();
 
+  @include media("<850px") {
+    padding: 0;
+  }
+
   .sectionsContainer {
     @include sectionsContainer();
 
     @include media("<850px") {
       margin: 120px 0;
+    }
+
+    @include media("<450px") {
+      margin: 80px 0;
     }
 
     .leftSection {
