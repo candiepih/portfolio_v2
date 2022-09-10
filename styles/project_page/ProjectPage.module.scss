@@ -15,9 +15,10 @@
   }
 
   .headerDetails {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     @include flex(row, space-between);
+    align-items: center;
 
     @include media("<800px") {
       @include flex(column, center);
@@ -32,7 +33,7 @@
     }
 
     .title {
-      width: 50%;
+      width: calc(50% - 20px);
 
       @include media("<1000px") {
         width: 60%;
@@ -44,6 +45,7 @@
 
       h1 {
         font-size: 60px;
+        margin: 0;
 
         @include media("<1205px") {
           font-size: 50px;
@@ -62,8 +64,16 @@
       }
     }
 
+    .moreDetails {
+      width: calc(40% - 20px);
+
+      .detailedP {
+        color: white
+      }
+    }
+
     .links {
-      @include flex(column, center);
+      @include flex(row, left);
       font-size: 30px;
 
       @include media("<800px") {
@@ -85,6 +95,7 @@
         color: white;
         text-decoration: underline;
         margin-bottom: 20px;
+        margin-right: 50px;
 
         svg {
           transform: translate(10px, 7px);

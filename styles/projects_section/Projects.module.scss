@@ -6,6 +6,7 @@
   min-height: 100vh;
   background-color: $primary-color-2;
   color: white;
+  padding: 150px 0;
   @include alignSectionCenter();
 
   .sectionsContainer {

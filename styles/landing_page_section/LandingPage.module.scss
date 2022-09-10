@@ -5,11 +5,11 @@
   width: 100%;
   height: 100vh;
   background: rgb(255, 214, 0);
-  background: -moz-radial-gradient(circle, rgba(255, 214, 0, 1) 0%, rgba(255, 172, 17, 1) 100%);
-  background: -webkit-radial-gradient(circle, rgba(255, 214, 0, 1) 0%, rgba(255, 172, 17, 1) 100%);
-  background: radial-gradient(circle, rgba(255, 214, 0, 1) 0%, rgba(255, 172, 17, 1) 100%);
+  background: -moz-radial-gradient(circle, rgba(255, 214, 0, .5) 0%, rgba(255, 172, 17, 0.8) 100%), url('/images/grain-noise.svg');
+  background: -webkit-radial-gradient(circle, rgba(255, 214, 0, .5) 0%, rgba(255, 172, 17, 0.8) 100%), url('/images/grain-noise.svg');
+  background: radial-gradient(circle, rgba(255, 214, 0, .5) 0%, rgba(255, 172, 17, 0.8) 100%), url('/images/grain-noise.svg');
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffd600", endColorstr="#ffac11", GradientType=1);
-  @include flex(row, center);
+  @include flex(row, space-between);
   align-items: center;
   align-content: center;
   position: relative;
@@ -18,98 +18,106 @@
     @include flex(column, center);
   }
 
-  .leftSection,
-  .rightSection {
-    width: 50%;
+  .landingPageContentContainer {
+    width: 90%;
+    margin: 0 auto;
+    @include flex(row, space-between);
+    align-items: center;
+    align-content: center;
+    position: relative;
 
-    @include media("<550px") {
-      width: 80%;
-    }
-  }
-
-  .leftSection {
-    .imageContainer {
-      width: 50%;
-      height: 50%;
-      float: right;
-      margin-right: 80px;
-
-      @include media("<850px") {
-        display: none;
-      }
-
-      img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-
-  .rightSection {
-    h1 {
-      @include HeadingsFont();
+    @include media("<850px") {
+      @include flex(column, center);
     }
 
-    .name {
-      text-transform: uppercase;
-      font-size: 40px;
-      line-height: 90px;
-      position: relative;
-      margin-bottom: -40px;
+    .leftSection,
+    .rightSection {
+      width: calc(50% - 20px);
 
-      @include media("<1130px") {
-        font-size: 35px;
+      @include media("<550px") {
+        width: 80%;
       }
+    }
 
-      @include media("<950px") {
-        font-size: 30px;
+    .leftSection {
+      height: 100%;
+      @include flex(column, center);
+      align-items: center;
+
+      .imageContainer {
+        @include flex(column, center);
+        align-items: center;
+        align-content: center;
+
+        @include media("<850px") {
+          display: none;
+        }
+
+        img {
+          object-fit: cover;
+          width: 70%;
+          height: 70%;
+        }
       }
+    }
 
-      @include media("<340px") {
-        font-size: 27px;
-      }
-
-      @include media("<305px") {
-        font-size: 25px;
-      }
-
-      @include media("<281px") {
-        line-height: 55px;
-      }
-
+    .rightSection {
       h1 {
-        position: relative;
-        letter-spacing: 0.1rem;
-        font-weight: 500;
+        @include HeadingsFont();
+      }
 
-        span {
-          color: white;
+      .name {
+        text-transform: uppercase;
+        font-size: 40px;
+        line-height: 90px;
+        position: relative;
+        margin-bottom: -40px;
+
+        @include media("<1130px") {
+          font-size: 35px;
+        }
+
+        @include media("<950px") {
+          font-size: 30px;
+        }
+
+        @include media("<340px") {
+          font-size: 27px;
+        }
+
+        @include media("<305px") {
+          font-size: 25px;
+        }
+
+        @include media("<281px") {
+          line-height: 55px;
+        }
+
+        h1 {
+          position: relative;
+          letter-spacing: 0.1rem;
+          font-weight: 500;
+          color: $secondary-color;
+
+          span {
+            color: white;
+          }
         }
       }
 
-      // &::before {
-      //   content: '';
-      //   position: absolute;
-      //   width: 100px;
-      //   height: 100%;
-      //   background-color: $secondary-color;
-      //   z-index: 0;
-      // }
-    }
+      .title {
+        text-transform: capitalize;
+        font-weight: 500;
+        margin-top: 70px;
 
-    .title {
-      text-transform: capitalize;
-      font-weight: 500;
-      margin-top: 70px;
-
-      span:nth-child(3) {
-        color: white;
-        display: inline-block;
-        transform: translateY(-10px);
+        span:nth-child(2) {
+          color: white;
+          display: inline-block;
+        }
       }
     }
   }
+
 
   .greeting {
     letter-spacing: 0.1rem;
