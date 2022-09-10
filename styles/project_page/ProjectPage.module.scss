@@ -67,6 +67,14 @@
     .moreDetails {
       width: calc(40% - 20px);
 
+      @include media("<1000px") {
+        width: 60%;
+      }
+
+      @include media("<800px") {
+        width: 100%;
+      }
+
       .detailedP {
         color: white
       }
