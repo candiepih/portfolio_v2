@@ -19,7 +19,7 @@ const About = () => {
           </div>
           <div className={styles.buttons}>
             <a href="https://profile.codersrank.io/user/candiepih/" target={"_blank"}><button className={styles.skillsButton}>SKILL DETAILS</button></a>
-            <a href="#"><button className={styles.downloadButton}>DOWNLOAD CV</button></a>
+            <a href="https://drive.google.com/file/d/12qvut7heU1xSvYCVuU1LDNa71nGKpWlI/view?usp=sharing"><button className={styles.downloadButton}>DOWNLOAD CV</button></a>
           </div>
         </div>
       </div>
